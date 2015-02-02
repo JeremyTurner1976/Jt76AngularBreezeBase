@@ -169,9 +169,9 @@
                     vm.strOrderBy = key;
             });
 
-            if (strOrder.substr(0,2).indexOf("dt") === 0)
+            if (vm.strOrderBy.substr(0,2).indexOf("dt") === 0)
                 vm.strOrderBy += " desc";
-            else if (strOrder.length > 0)
+            else if (vm.strOrderBy.length > 0)
                 vm.strOrderBy += " asc";
 
             getErrors(false, vm.errorsPaging.nCurrentPage, vm.errorsPaging.nPageSize);
