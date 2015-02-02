@@ -1,0 +1,51 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.31101.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Jt76Base.Tests", "Jt76Base.Tests\Jt76Base.Tests.csproj", "{A830A41C-0501-4764-9BF5-4B0867D8B4C1}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{6B1818BC-7327-4950-82FD-E17AF04B0DDC}"
+	ProjectSection(SolutionItems) = preProject
+		.nuget\NuGet.Config = .nuget\NuGet.Config
+		.nuget\NuGet.exe = .nuget\NuGet.exe
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Jt76Base", "Jt76Base", "{F5CC8828-DF4C-4E4A-939B-F9D26D424BA2}"
+	ProjectSection(SolutionItems) = preProject
+		ReadMe.txt = ReadMe.txt
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Jt76Base.Common", "JT76.Common\Jt76Base.Common.csproj", "{FF020B2C-42EB-45CC-A7D1-4C5D768BB5BA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Jt76Base.Data", "JT76.Data\Jt76Base.Data.csproj", "{88C6A16A-1B40-4629-939B-6D2A2F80F499}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Jt76Base.Ui", "Jt76Base.Ui\Jt76Base.Ui.csproj", "{58A134AA-B150-47C7-850C-30D4920CFBC6}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A830A41C-0501-4764-9BF5-4B0867D8B4C1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A830A41C-0501-4764-9BF5-4B0867D8B4C1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A830A41C-0501-4764-9BF5-4B0867D8B4C1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A830A41C-0501-4764-9BF5-4B0867D8B4C1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FF020B2C-42EB-45CC-A7D1-4C5D768BB5BA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FF020B2C-42EB-45CC-A7D1-4C5D768BB5BA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FF020B2C-42EB-45CC-A7D1-4C5D768BB5BA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FF020B2C-42EB-45CC-A7D1-4C5D768BB5BA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{88C6A16A-1B40-4629-939B-6D2A2F80F499}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{88C6A16A-1B40-4629-939B-6D2A2F80F499}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{88C6A16A-1B40-4629-939B-6D2A2F80F499}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{88C6A16A-1B40-4629-939B-6D2A2F80F499}.Release|Any CPU.Build.0 = Release|Any CPU
+		{58A134AA-B150-47C7-850C-30D4920CFBC6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{58A134AA-B150-47C7-850C-30D4920CFBC6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{58A134AA-B150-47C7-850C-30D4920CFBC6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{58A134AA-B150-47C7-850C-30D4920CFBC6}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

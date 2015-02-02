@@ -1,0 +1,2646 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Documentation</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+	<!-- Bootstrap core CSS -->
+    <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+	
+	<!-- Google Code Prettify -->
+	<link href="assets/css/prettify.css" rel="stylesheet">
+	
+	<!-- Font Awesome -->
+	<link href="assets/css/font-awesome.min.css" rel="stylesheet">
+
+	<!-- ionicons -->
+	<link href="assets/css/ionicons.min.css" rel="stylesheet">
+
+	<!-- Datepicker -->
+	<link href="assets/css/datepicker.css" rel="stylesheet">
+	
+	<!-- Default Stylesheet-->
+	<link href="assets/css/simplify.css" rel="stylesheet">
+	<link href="assets/css/doc.css" rel="stylesheet">
+
+  </head>
+
+  <body>
+	<div class="top-nav"></div>
+	<div class="wrapper">
+		<div class="header">
+			<span class="brand">Simplify Admin</span>
+			<span class="version">Documentation 1.0</span>
+		</div>
+	
+		<div class="bg-grey">
+			<h2 class="m-top-none">Thank You For Purchasing One of Our Items!</h2>
+			Below is all the information you will need to setup and use your theme. We have taken extra time and effort to make these docs as detailed as possible.If you have any questions that are beyond the scope of this help file, please feel free to contact us at <span class="text-important">endless.themes@gmail.com</span>.We will do our best to help you where we can.
+		</div>
+		
+		<h2 class="headline">
+			Table of Contents
+			<span class="line"></span>
+		</h2>
+		<ul>
+			<li><a href="#section1">A. Getting Started</a></li>
+			<li><a href="#section2">B. HTML Structure</a></li>
+			<li><a href="#section3">C. CSS</a></li>
+			<li><a href="#section4">D. Component</a></li>
+			<li><a href="#section5">E. Change Log</a></li>
+			<li><a href="#section6">F. Credits</a></li>
+		</ul>
+		<h2 class="headline" id="section1">
+			A. Getting started
+			<span class="line"></span>
+			<a class="to-top" href="#">Back to top <i class="fa fa-angle-double-up"></i></a>
+		</h2>
+		<p>
+			Before we start, let's take a look on the folder structure of the theme. All theme files are placed in the HTML folder. The main HTML folder consists of 6 more folders for different types of theme assets:
+		</p>
+		<h3 class="headline">
+			1. Main Structure
+			<span class="line"></span>
+		</h3>
+<pre class="prettyprint linenums">	HTML/                      		// Root directory
+	    bootstrap/                     	// Twitter Bootstrap
+	    css/                    		// CSS Files
+	    fonts/                    		// Fonts
+	    images/                    		// Default Images
+	    js/                            	// Scripts
+	    less/                          	// LESS Files
+</pre>
+		
+		<h3 class="headline">
+			2. CSS Files
+			<span class="line"></span>
+		</h3>
+		<p>Simplify Admin uses several of stylesheets to control visual apperance.The stylesheets consist of Twitter Bootstrap, default theme stylesheets and plugin stylesheets. </p>
+<pre class="prettyprint linenums">	HTML/bootstrap/css/bootstrap.min.css		// Twitter Bootstrap Stylesheets
+	HTML/css/simplify.min.css		        // Default Stylesheets
+</pre>
+
+		<div class="alert">
+			<strong>Note</strong> : There are more plugin-specific CSS files in the "css" folder. These CSS files are important for the correct work of the third party plugins.
+		</div>
+		
+		<h3 class="headline">
+			3. LESS Files
+			<span class="line"></span>
+		</h3>
+		
+		<p>
+			LESS extends CSS with dynamic behavior such as variables, mixins, operations and functions.LESS runs on both the server-side (with Node.js and Rhino) and client-side (modern browsers only).
+		</p>
+		
+		<p>LESS files are located under the <code>HTML/less</code> directory.</p>
+		
+		<p>ALL LESS variables are defined in <code>variables.less</code>.</p>
+		
+		<a href="http://lesscss.org/" class="text-important">Learn more about less css</a>
+		<h3 class="headline">
+			4. Scripts
+			<span class="line"></span>
+		</h3>
+		<p>
+			Simplify Admin uses many third party plugins & scripts. There are scripts from Twitter Bootstrap, jQuery & plugins and custom scripts. They are all located in <code>HTML/js/</code>. The uncompressed js files are put in the <code>HTML/js/uncompressed/</code> folder. For more information about external scripts refer to <a class="text-important" href="#section5">Credits</a>.
+		</p>
+		
+		<h2 class="headline" id="section2">
+			B. HTML Structure
+			<span class="line"></span>
+			<a class="to-top" href="#">Back to top <i class="fa fa-angle-double-up"></i></a>
+		</h2>
+		
+		<p>
+			The main HTML structure of the template consists of 4 main containers containing all page elements:
+		</p>
+		<ul>
+			<li>Top navigation</li>
+			<li>Left Sidebar</li>
+			<li>Right Sidebar</li>
+			<li>Main container</li>
+			<li>Footer</li>
+		</ul>
+		
+		<p class="m-top-md">
+			Simplify Admin is based on the Twitter Bootstrap framework which makes it flexible for all kinds of resolutions. It uses a 12 column grid.  The main page build up is as follows:
+		</p>
+		
+<pre class="prettyprint linenums">&lt;!-- Main Wrapper --&gt;
+&lt;div class="wrapper"&gt;
+
+    &lt;!-- Right Sidebar --&gt;
+    &lt;div class="sidebar-right"&gt;
+
+    &lt;/div&gt;
+    &lt;!-- End of Right Sidebar --&gt;
+
+    &lt;!-- Top Navigation --&gt;
+    &lt;div class="top-nav"&gt;
+	
+    &lt;/div&gt;
+    &lt;!-- End of Top Navigation --&gt;
+
+    &lt;!-- Left Sidebar Menu --&gt;
+    &lt;div class="sidebar-menu"&gt;
+	
+    &lt;/div&gt;
+    &lt;!-- End of Sidebar Menu --&gt;
+	
+    &lt;!-- Main Container --&gt;
+    &lt;div class="main-container"&gt;
+	
+    &lt;/div&gt;
+    &lt;!-- End of Main Container --&gt;
+	
+    &lt;!-- Footer --&gt;
+    &lt;footer class="footer"&gt;
+	
+    &lt;/footer&gt;
+    &lt;!-- End of Footer --&gt;
+&lt;/div&gt;
+&lt;!-- End of Main Wrapper --&gt;
+</pre>
+		<h3 class="headline" id="topNavigation">
+			1. Top Navigation
+			<span class="line"></span>
+			<a class="to-top" href="#">Back to top <i class="fa fa-angle-double-up"></i></a>
+		</h3>
+		
+		<p>
+			The top navigation is the bar at the top of the page.
+		</p>
+		
+		<img src="assets/img/top_navigation.jpg" alt="Top Navigation" class="m-bottom-20">
+		
+<pre class="prettyprint linenums">
+    &lt;!-- Top Navigation --&gt;
+    &lt;div class="top-nav"&gt;
+        &lt;div class="top-nav-inner"&gt; 
+            &lt;div class="nav-header"&gt;
+                &lt;button type="button" class="navbar-toggle pull-left sidebar-toggle" id="sidebarToggleSM"&gt;
+                    &lt;span class="icon-bar"&gt;&lt;/span&gt;
+                    &lt;span class="icon-bar"&gt;&lt;/span&gt;
+                    &lt;span class="icon-bar"&gt;&lt;/span&gt;
+                &lt;/button&gt;
+                &lt;ul class="nav-notification pull-right"&gt;
+                    .
+                    .
+                    .
+                &lt;/ul&gt;
+
+                &lt;a href="" class="brand"&gt;
+                    &lt;i class="fa fa-database"&gt;&lt;/i&gt;&lt;span class="brand-name"&gt;SIMPLIFY ADMIN&lt;/span&gt;
+                &lt;/a&gt;
+            &lt;/div&gt;
+            &lt;div class="nav-container"&gt;
+                &lt;button type="button" class="navbar-toggle pull-left sidebar-toggle" id="sidebarToggleLG"&gt;
+                    &lt;span class="icon-bar">&lt;/span&gt;
+                    &lt;span class="icon-bar">&lt;/span&gt;
+                    &lt;span class="icon-bar">&lt;/span&gt;
+                &lt;button&gt;
+
+                &lt;!-- Search Input --&gt;
+                &lt;ul class="nav-notification"&gt;	
+                    &lt;li class="search-list"&gt;
+                        &lt;div class="search-input-wrapper"&gt;
+                            &lt;div class="search-input"&gt;
+                                &lt;input type="text" class="form-control input-sm inline-block"&gt;
+                                &lt;a href="#" class="input-icon text-normal">&lt;i class="ion-ios7-search-strong">&lt;/i&gt;&lt;/a&gt;
+                            &lt;/div&gt;
+                        &lt;/div&gt;
+                    &lt;/li&gt;
+                &lt;/ul&gt;
+                &lt;!-- End Search Input --&gt;
+
+                &lt;!-- Notificaton --&gt;
+                &lt;div class="pull-right m-right-sm"&gt;
+                    &lt;div class="user-block hidden-xs"&gt;
+                        &lt;a href="#" id="userToggle" data-toggle="dropdown">
+                            &lt;img src="images/profile/profile1.jpg" alt="" class="img-circle inline-block user-profile-pic"&gt;
+                            &lt;div class="user-detail inline-block"&gt;
+                                Jane Doe
+                                &lt;i class="fa fa-angle-down">&lt;/i&gt;
+                            &lt;/div&gt;
+                        &lt;/a&gt;
+                        &lt;div class="panel border dropdown-menu user-panel"&gt;
+                            &lt;div class="panel-body paddingTB-sm"&gt;
+                                &lt;ul&gt;
+                                    &lt;li&gt;
+                                        &lt;a href="#"&gt;
+                                            &lt;i class="fa fa-edit fa-lg">&lt;/i>&lt;span class="m-left-xs">My Profile&lt;/span&gt;
+                                        &lt;/a&gt;
+                                    &lt;/li&gt;
+                                    &lt;li&gt;
+                                        &lt;a href="#"&gt;
+                                            &lt;i class="fa fa-inbox fa-lg">&lt;/i&gt;&lt;span class="m-left-xs">Inboxes&lt;/span&gt;
+                                            &lt;span class="badge badge-danger bounceIn animation-delay3">2&lt;/span&gt;
+                                        &lt;/a&gt;
+                                    &lt;/li&gt;
+                                    &lt;li&gt;
+                                        &lt;a href="#"&gt;
+                                            &lt;i class="fa fa-power-off fa-lg">&lt;/i&gt;&lt;span class="m-left-xs">Sign out&lt;/span&gt;
+                                        &lt;/a&gt;
+                                    &lt;/li&gt;
+                                &lt;/ul&gt;
+                            &lt;/div&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+                    &lt;ul class="nav-notification"&gt;
+                        .
+                        .
+                        .
+                    &lt;/ul&gt;
+                &lt;/div&gt;
+                &lt;!-- End Notificaton --&gt;
+
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;!-- End of Top Navigation --&gt;
+</pre>
+		<p>
+			You can turn every item in <code>.nav-notification</code>  into a dropdown toggle by adding the following code:
+		</p>
+
+<pre class="prettyprint linenums">
+     &lt;ul class="nav-notification clearfix"&gt;
+         &lt;li class="dropdown"&gt;
+             &lt;a class="dropdown-toggle" data-toggle="dropdown"&gt;
+                 ...
+             &lt;/a&gt;
+             &lt;ul class="dropdown-menu"&gt;	  
+                 ...
+             &lt;/ul&gt;
+         &lt;/li&gt;
+     &lt;/ul&gt;
+</pre>
+		
+		<h3 class="headline">
+			2. Left Sidebar Menu
+			<span class="line"></span>
+			<a class="to-top" href="#">Back to top <i class="fa fa-angle-double-up"></i></a>
+		</h3>
+		
+		<div class="clearfix">
+			<div class="pull-left" style="width:230px;">
+				<img src="assets/img/sidebar.jpg" alt="Sidebar Menu" class="img-thumbnail">
+			</div>
+			<div class="pull-left m-left-md"  style="width:700px;">
+<pre class="prettyprint linenums">
+    &lt;aside class="sidebar-menu fixed"&gt;
+        &lt;div class="sidebar-inner scrollable-sidebar"&gt;
+            &lt;div class="main-menu"&gt;
+                .
+                .
+                .
+            &lt;/div&gt;
+            &lt;div class="sidebar-fix-bottom clearfix"&gt;
+                .
+                .
+                .
+            &lt;/div&gt; 
+        &lt;/div&gt;
+    &lt;/aside&gt;
+</pre>
+			</div>
+		</div>
+		
+		<h4 class="headline">
+			2.1 Main Menu
+			<span class="line"></span>
+		</h4>
+		
+<pre class="prettyprint linenums">
+&lt;div class="main-menu"&gt;
+    &lt;ul&gt;
+        &lt;li class="menu-header"&gt;
+            Main Menu
+        &lt;/li&gt;
+        &lt;li class="bg-palette1"&gt;
+            &lt;a href="index.html"&gt;
+                &lt;span class="menu-content block"&gt;
+                    &lt;span class="menu-icon">&lt;i class="block fa fa-home fa-lg">&lt;/i&gt;&lt;/span&gt;
+                    &lt;span class="text m-left-sm"&gt;Dashboard&lt;/span&gt;
+                &lt;/span&gt;
+                &lt;span class="menu-content-hover block"&gt;
+                    Home
+                &lt;/span&gt;
+            &lt;/a&gt;
+        &lt;/li&gt;
+    &lt;/ul&gt;
+&lt;/div&gt;
+</pre>
+		
+		<p>You can use the <code>.sidebar-mini</code> class to change size of the sidebar menu.</p>
+		
+		<div class="clearfix">
+			<div class="pull-left" style="width:70px;">
+				<img src="assets/img/sidebar2.jpg" alt="Sidebar Menu" class="img-thumbnail">
+			</div>
+			<div class="pull-left m-left-md"  style="width:860px;">
+			
+<pre class="prettyprint linenums">&lt;!-- Main Wrapper --&gt;
+&lt;div id="wrapper"&gt;
+    &lt;!-- Sidebar Menu --&gt;
+    &lt;aside class="sidebar-menu fixed sidebar-mini"&gt;
+	
+    &lt;/aside&gt;
+    &lt;!-- End of Sidebar Menu --&gt;
+&lt;/div&gt;
+&lt;!-- End of Main Wrapper --&gt;
+</pre>
+            
+			</div>
+		</div>
+		
+		<h4 class="headline">
+			2.2 Sub Menus
+			<span class="line"></span>
+		</h4>
+		
+		<div class="clearfix">
+			<div class="pull-left" style="width:200px;">
+				<img src="assets/img/sidebar3.jpg" alt="Sidebar Menu" class="img-thumbnail">
+			</div>
+			<div class="pull-left m-left-md"  style="width:730px;">
+			
+<pre class="prettyprint linenums">
+&lt;div class="main-menu"&gt;
+    &lt;ul&gt;
+        &lt;li class="openable bg-palette3"&gt;
+            &lt;a href="#"&gt;
+                &lt;span class="menu-content block"&gt;
+                    &lt;span class="menu-icon"&gt;&lt;i class="block fa fa-list fa-lg">&lt;/i&gt;&lt;/span&gt;
+                    &lt;span class="text m-left-sm"&gt;Form Elements&lt;/span&gt;
+                    &lt;span class="submenu-icon"&gt;&lt;/span&gt; 
+                &lt;/span&gt;
+                &lt;span class="menu-content-hover block"&gt;
+                    Form
+                &lt;/span&gt;
+            &lt;/a&gt;
+            &lt;ul class="submenu bg-palette4"&gt;
+                &lt;li&gt;&lt;a href="form_element.html"&gt;&lt;span class="submenu-label"&gt;Form Element&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a href="form_validation.html"&gt;&lt;span class="submenu-label"&gt;Form Validation&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a href="form_wizard.html"&gt;&lt;span class="submenu-label"&gt;Form Wizard&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a href="dropzone.html"&gt;&lt;span class="submenu-label">Dropzone&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+            &lt;/ul&gt; 
+        &lt;/li&gt;
+    &lt;/ul&gt;
+&lt;div&gt;	
+</pre>
+			</div>
+		</div>
+		
+		<h3 class="headline">
+			3. Right Sidebar
+			<span class="line"></span>
+			<a class="to-top" href="#">Back to top <i class="fa fa-angle-double-up"></i></a>
+		</h3>
+
+		<div class="clearfix">
+			<div class="pull-left" style="width:230px;">
+				<img src="assets/img/right_sidebar.jpg" alt="Sidebar Menu" class="img-thumbnail">
+			</div>
+			<div class="pull-left m-left-md"  style="width:700px;">
+<pre class="prettyprint linenums">
+&lt;div class="sidebar-right"&gt;
+    &lt;div class="sidebar-inner scrollable-sidebar"&gt;
+
+    	&lt;!-- Search Input --&gt;
+        &lt;div class="sidebar-header clearfix"&gt;
+            &lt;input class="form-control dark-input" placeholder="Search" type="text"&gt;
+            &lt;div class="btn-group pull-right"&gt;
+                &lt;a href="#" class="sidebar-setting" data-toggle="dropdown"&gt;&lt;i class="fa fa-cog fa-lg"&gt;&lt;/i&gt;&lt;/a&gt;
+                &lt;ul class="dropdown-menu pull-right flipInV"&gt;
+                    &lt;li&gt;&lt;a href="#"&gt;&lt;i class="fa fa-circle text-danger"&gt;&lt;/i&gt;&lt;span class="m-left-xs"&gt;Busy&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+                    &lt;li&gt;&lt;a href="#"&gt;&lt;i class="fa fa-circle-o"&gt;&lt;/i>&lt;span class="m-left-xs"&gt;Turn Off Chat&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+                &lt;/ul&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;!-- End Search Input --&gt;
+
+        &lt;!-- Group Chat --&gt;
+        &lt;div class="title-block"&gt;
+            Group Chat
+        &lt;/div&gt;
+        &lt;div class="content-block"&gt;
+            &lt;ul class="sidebar-list"&gt;
+                &lt;li&gt;
+                    &lt;a href="#"&gt;
+                        &lt;i class="fa fa-circle-o text-success"&gt;&lt;/i&gt;&lt;span class="m-left-xs"&gt;Close Friends&lt;/span&gt;
+                    &lt;/a&gt;
+                &lt;/li&gt;
+                &lt;li&gt;
+                    &lt;a href="#"&gt;
+                        &lt;i class="fa fa-circle-o text-success"&gt;&lt;/i&gt;&lt;span class="m-left-xs"&gt;Business&lt;/span&gt;
+                    &lt;/a&gt;
+                &lt;/li&gt;
+            &lt;/ul&gt;
+        &lt;/div&gt;
+        &lt;!-- End Group Chat --&gt;
+
+        &lt;div class="title-block"&gt;
+            Favorites
+        &lt;/div&gt;
+        &lt;div class="content-block"&gt;
+            &lt;ul class="sidebar-list"&gt;
+                &lt;li&gt;
+                    &lt;a href="#" class="clearfix"&gt;
+                        &lt;img src="images/profile/profile2.jpg" class="img-circle" alt="user avatar"&gt;
+                        &lt;div class="chat-detail m-left-sm"&gt;
+                            &lt;div class="chat-name"&gt;
+                                John Doe
+                            &lt;/div&gt;
+                            &lt;div class="chat-message"&gt;
+                                Where are you?
+                            &lt;/div&gt;
+                        &lt;/div&gt;
+                        &lt;div class="chat-status"&gt;
+                            &lt;i class="fa fa-circle-o text-success">&lt;/i&gt;
+                        &lt;/div&gt;
+                        &lt;div class="chat-alert"&gt;
+                            &lt;span class="badge badge-purple bounceIn animation-delay2"&gt;2&lt;/span&gt;
+                        &lt;/div&gt;
+                    &lt;/a&gt;
+                &lt;/li&gt;
+                .
+                .
+                .
+            &lt;/ul&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+</pre>
+			</div>
+		</div>
+
+		<h3 class="headline">
+			4. Main Container
+			<span class="line"></span>
+			<a class="to-top" href="#">Back to top <i class="fa fa-angle-double-up"></i></a>
+		</h3>
+		<p>
+			The main content is the most important part and can be filled in various ways. Take a look at the example pages and mix and match to get what you want. 
+		</p>
+<pre class="prettyprint linenums">
+&lt;div class="main-container"&gt;
+    ...    
+&lt;/div&gt;
+</pre>
+		
+		<h3 class="headline">
+			5. Footer
+			<span class="line"></span>
+			<a class="to-top" href="#">Back to top <i class="fa fa-angle-double-up"></i></a>
+		</h3>
+		<img src="assets/img/footer.jpg" alt="" class="m-bottom-md">
+<pre class="prettyprint linenums">
+&lt;footer class="footer"&gt;
+	&lt;span class="footer-brand"&gt;
+		&lt;strong class="text-danger"&gt;Simplify&lt;/strong&gt; Admin
+	&lt;/span&gt;
+	&lt;p class="no-margin"&gt;
+		&copy; 2014 &lt;strong&gt;Simplify Admin&lt;/strong&gt;. ALL Rights Reserved. 
+	&lt;/p&gt;	
+&lt;/footer&gt;
+</pre>
+
+		<h2 class="headline" id="section3">
+			C. CSS
+			<span class="line"></span>
+			<a class="to-top" href="#">Back to top <i class="fa fa-angle-double-up"></i></a>
+		</h2>
+		
+		<p>This theme is built on Twitter's Bootstrap Framework.This documentation included some of the information about Bootstrap Framework, but If you are not familiar with Bootstrap, it's highly recommended that you learn directly from <a href="http://getbootstrap.com/" class="text-important">Twitter's Bootstrap documentation.</a></p>
+		
+		<h3 class="headline">
+			1. Grid System
+			<span class="line"></span>
+		</h3>
+		<p>
+			Using a single set of <code>.col-md-*</code> grid classes, you can create a basic grid system that starts out stacked on mobile devices and tablet devices (the extra small to small range) before becoming horizontal on desktop (medium) devices.
+		</p>
+		<div class="row show-grid">
+			<div class="col-md-1">.col-md-1</div>
+			<div class="col-md-1">.col-md-1</div>
+			<div class="col-md-1">.col-md-1</div>
+			<div class="col-md-1">.col-md-1</div>
+			<div class="col-md-1">.col-md-1</div>
+			<div class="col-md-1">.col-md-1</div>
+			<div class="col-md-1">.col-md-1</div>
+			<div class="col-md-1">.col-md-1</div>
+			<div class="col-md-1">.col-md-1</div>
+			<div class="col-md-1">.col-md-1</div>
+			<div class="col-md-1">.col-md-1</div>
+			<div class="col-md-1">.col-md-1</div>
+		</div>
+		<div class="row show-grid">
+			<div class="col-md-8">.col-md-8</div>
+			<div class="col-md-4">.col-md-4</div>
+		</div>
+		<div class="row show-grid">
+			<div class="col-md-4">.col-md-4</div>
+			<div class="col-md-4">.col-md-4</div>
+			<div class="col-md-4">.col-md-4</div>
+		</div>
+		<div class="row show-grid m-bottom-20">
+			<div class="col-md-6">.col-md-6</div>
+			<div class="col-md-6">.col-md-6</div>
+		</div>
+<pre class="prettyprint linenums">
+&lt;div class="row"&gt;
+    &lt;div class="col-md-1"&gt;.col-md-1&lt;/div&gt;
+    &lt;div class="col-md-1"&gt;.col-md-1&lt;/div&gt;
+    &lt;div class="col-md-1"&gt;.col-md-1&lt;/div&gt;
+    &lt;div class="col-md-1"&gt;.col-md-1&lt;/div&gt;
+    &lt;div class="col-md-1"&gt;.col-md-1&lt;/div&gt;
+    &lt;div class="col-md-1"&gt;.col-md-1&lt;/div&gt;
+    &lt;div class="col-md-1"&gt;.col-md-1&lt;/div&gt;
+    &lt;div class="col-md-1"&gt;.col-md-1&lt;/div&gt;
+    &lt;div class="col-md-1"&gt;.col-md-1&lt;/div&gt;
+    &lt;div class="col-md-1"&gt;.col-md-1&lt;/div&gt;
+    &lt;div class="col-md-1"&gt;.col-md-1&lt;/div&gt;
+    &lt;div class="col-md-1"&gt;.col-md-1&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="row&gt;
+    &lt;div class="col-md-8"&gt;.col-md-8&lt;/div&gt;
+    &lt;div class="col-md-4"&gt;.col-md-4&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="row"&gt;
+    &lt;div class="col-md-4"&gt;.col-md-4&lt;/div&gt;
+    &lt;div class="col-md-4"&gt;.col-md-4&lt;/div&gt;
+    &lt;div class="col-md-4"&gt;.col-md-4&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="row"&gt;
+    &lt;div class="col-md-6"&gt;.col-md-6&lt;/div&gt;
+    &lt;div class="col-md-6"&gt;.col-md-6&lt;/div&gt;
+&lt;/div&gt;
+</pre>
+
+		<h4 class="headline">
+			1.1 Mobile, tablet, desktops
+			<span class="line"></span>
+		</h4>
+		<p>
+			Use the extra small and medium device grid classes by adding <code>.col-xs-*</code> <code>.col-sm-*</code> <code>.col-md-*</code> to your columns. See the example below for a better idea of how it all works.
+		</p>
+		
+		<div class="row show-grid">
+		  <div class="col-xs-12 col-md-8">.col-xs-12 col-md-8</div>
+		  <div class="col-xs-6 col-md-4">.col-xs-6 .col-md-4</div>
+		</div>
+
+		<div class="row show-grid">
+		  <div class="col-xs-6 col-md-4">.col-xs-6 .col-md-4</div>
+		  <div class="col-xs-6 col-md-4">.col-xs-6 .col-md-4</div>
+		  <div class="col-xs-6 col-md-4">.col-xs-6 .col-md-4</div>
+		</div>
+
+		<div class="row show-grid m-bottom-20">
+		  <div class="col-xs-6">.col-xs-6</div>
+		  <div class="col-xs-6">.col-xs-6</div>
+		</div>
+<pre class="prettyprint linenums">
+&lt;!-- Stack the columns on mobile by making one full-width and the other half-width --&gt;
+&lt;div class="row"&gt;
+    &lt;div class="col-xs-12 col-md-8"&gt;.col-xs-12 col-md-8&lt;/div&gt;
+    &lt;div class="col-xs-6 col-md-4"&gt;.col-xs-6 .col-md-4&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;!-- Columns start at 50% wide on mobile and bump up to 33.3% wide on desktop --&gt;
+&lt;div class="row"&gt;
+    &lt;div class="col-xs-6 col-md-4"&gt;.col-xs-6 .col-md-4&lt;/div&gt;
+    &lt;div class="col-xs-6 col-md-4"&gt;.col-xs-6 .col-md-4&lt;/div&gt;
+    &lt;div class="col-xs-6 col-md-4"&gt;.col-xs-6 .col-md-4&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;!-- Columns are always 50% wide, on mobile and desktop --&gt;
+&lt;div class="row"&gt;
+    &lt;div class="col-xs-6"&gt;.col-xs-6&lt;/div&gt;
+    &lt;div class="col-xs-6"&gt;.col-xs-6&lt;/div&gt;
+&lt;/div&gt;
+</pre>
+		
+		<h4 class="headline">
+			1.2 Nesting columns
+			<span class="line"></span>
+		</h4>
+		<p>
+			To nest your content with the default grid, add a new <code>.row</code> and set of <code>.col-md-*</code> columns within an existing <code>.col-md-*</code> column. Nested rows should include a set of columns that add up to 12.
+		</p>
+		<div class="row show-grid m-bottom-20">
+			<div class="col-md-9">
+				Level 1: .col-md-9
+				<div class="row">
+					<div class="col-md-6">
+						Level 2: .col-md-6
+					</div>
+					<div class="col-md-6">
+						Level 2: .col-md-6
+					</div>
+				</div>
+			</div>
+		</div>
+<pre class="prettyprint linenums">
+&lt;div class="row"&gt;
+    &lt;div class="col-md-9"&gt;
+        Level 1: .col-md-9
+        &lt;div class="row"&gt;
+            &lt;div class="col-md-6"&gt;
+                Level 2: .col-md-6
+            &lt;/div&gt;
+            &lt;div class="col-md-6"&gt;
+                Level 2: .col-md-6
+            &lt;/div&gt; 
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+</pre>	
+		<h3 class="headline">
+			2. Button
+			<span class="line"></span>
+			<a class="to-top" href="#">Back to top <i class="fa fa-angle-double-up"></i></a>
+		</h3>
+		<p>
+			Button styles can be applied to anything with the <code>.btn</code> class applied. However, typically you'll want to apply these to only <code>&lt;a&gt;</code> and <code>&lt;button&gt;</code> elements for the best rendering.
+		</p>
+		<div class="m-bottom-20">
+			<button class="btn btn-default">Default</button>
+			<button class="btn btn-primary">Primary</button>
+			<button class="btn btn-info">info</button>
+			<button class="btn btn-success">Success</button>
+			<button class="btn btn-warning">Warning</button>
+			<button class="btn btn-danger">Danger</button>
+		</div>
+		<div class="alert">
+			<strong>Note : </strong> All buttons MUST have the .btn class
+		</div>
+<pre class="prettyprint linenums">
+    &lt;!-- Default Button --&gt;	
+    &lt;button class="btn btn-default"&gt;Default&lt;/button&gt;
+	
+    &lt;!-- Primary Button --&gt;	
+    &lt;button class="btn btn-primary"&gt;Primary&lt;/button&gt;
+	
+    &lt;!-- Info Button --&gt;	
+    &lt;button class="btn btn-info"&gt;Info&lt;/button&gt;
+	
+    &lt;!-- Success Button --&gt;	
+    &lt;button class="btn btn-success"&gt;Success&lt;/button&gt;
+	
+    &lt;!-- Warning Button --&gt;	
+    &lt;button class="btn btn-warning"&gt;Warning&lt;/button&gt;
+	
+    &lt;!-- Danger Button --&gt;	
+    &lt;button class="btn btn-danger"&gt;Danger&lt;/button&gt;
+</pre>
+		<h4 class="headline">
+			2.1 Single Button Dropdowns
+			<span class="line"></span>
+		</h4>
+		
+		<div class="m-bottom-20">
+			<div class="btn-group m-right-5">
+				<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+					Default <span class="caret"></span>
+				</button>
+				<ul class="dropdown-menu">
+					<li><a href="#">Action</a></li>
+					<li><a href="#">Another action</a></li>
+					<li><a href="#">Something else here</a></li>
+					<li class="divider"></li>
+					<li><a href="#">Separated link</a></li>
+				</ul>
+			</div>
+			<div class="btn-group m-right-5">
+				<button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
+					Primary <span class="caret"></span>
+				</button>
+				<ul class="dropdown-menu">
+					<li><a href="#">Action</a></li>
+					<li><a href="#">Another action</a></li>
+					<li><a href="#">Something else here</a></li>
+					<li class="divider"></li>
+					<li><a href="#">Separated link</a></li>
+				</ul>
+			</div>
+			<div class="btn-group m-right-5">
+				<button type="button" class="btn btn-info dropdown-toggle" data-toggle="dropdown">
+					Info <span class="caret"></span>
+				</button>
+				<ul class="dropdown-menu">
+					<li><a href="#">Action</a></li>
+					<li><a href="#">Another action</a></li>
+					<li><a href="#">Something else here</a></li>
+					<li class="divider"></li>
+					<li><a href="#">Separated link</a></li>
+				</ul>
+			</div>
+			<div class="btn-group m-right-5">
+				<button type="button" class="btn btn-success dropdown-toggle" data-toggle="dropdown">
+					Success <span class="caret"></span>
+				</button>
+				<ul class="dropdown-menu">
+					<li><a href="#">Action</a></li>
+					<li><a href="#">Another action</a></li>
+					<li><a href="#">Something else here</a></li>
+					<li class="divider"></li>
+					<li><a href="#">Separated link</a></li>
+				</ul>
+			</div>
+			<div class="btn-group m-right-5">
+				<button type="button" class="btn btn-warning dropdown-toggle" data-toggle="dropdown">
+					Warning <span class="caret"></span>
+				</button>
+				<ul class="dropdown-menu">
+					<li><a href="#">Action</a></li>
+					<li><a href="#">Another action</a></li>
+					<li><a href="#">Something else here</a></li>
+					<li class="divider"></li>
+					<li><a href="#">Separated link</a></li>
+				</ul>
+			</div>
+			<div class="btn-group">
+				<button type="button" class="btn btn-danger dropdown-toggle" data-toggle="dropdown">
+					Danger <span class="caret"></span>
+				</button>
+				<ul class="dropdown-menu">
+					<li><a href="#">Action</a></li>
+					<li><a href="#">Another action</a></li>
+					<li><a href="#">Something else here</a></li>
+					<li class="divider"></li>
+					<li><a href="#">Separated link</a></li>
+				</ul>
+			</div>
+		</div>
+<pre class="prettyprint linenums">
+&lt;!-- Single button --&gt;
+&lt;div class="btn-group"&gt;
+    &lt;button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown"&gt;
+        Default &lt;span class="caret">&lt;/span&gt;
+    &lt;/button&gt;
+    &lt;ul class="dropdown-menu"&gt;
+        &lt;li&gt;&lt;a href="#"&gt;Action&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="#"&gt;Another action&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="#"&gt;Something else here&lt;/a&gt;&lt;/li&gt;
+        &lt;li class="divider"&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="#"&gt;Separated link&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+&lt;/div&gt;
+</pre>
+		
+		<h4 class="headline">
+			2.2 Split Button Dropdowns
+			<span class="line"></span>
+		</h4>
+		
+		<div class="m-bottom-20">
+			<div class="btn-group m-right-5">
+				<button type="button" class="btn btn-default">Action</button>
+				<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+					<span class="caret"></span>
+				</button>
+				<ul class="dropdown-menu" role="menu">
+					<li><a href="#">Action</a></li>
+					<li><a href="#">Another action</a></li>
+					<li><a href="#">Something else here</a></li>
+					<li class="divider"></li>
+					<li><a href="#">Separated link</a></li>
+				</ul>
+			</div>
+			<div class="btn-group m-right-5">
+				<button type="button" class="btn btn-primary">Action</button>
+				<button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
+					<span class="caret"></span>
+				</button>
+				<ul class="dropdown-menu" role="menu">
+					<li><a href="#">Action</a></li>
+					<li><a href="#">Another action</a></li>
+					<li><a href="#">Something else here</a></li>
+					<li class="divider"></li>
+					<li><a href="#">Separated link</a></li>
+				</ul>
+			</div>
+			<div class="btn-group m-right-5">
+				<button type="button" class="btn btn-info">Action</button>
+				<button type="button" class="btn btn-info dropdown-toggle" data-toggle="dropdown">
+					<span class="caret"></span>
+				</button>
+				<ul class="dropdown-menu" role="menu">
+					<li><a href="#">Action</a></li>
+					<li><a href="#">Another action</a></li>
+					<li><a href="#">Something else here</a></li>
+					<li class="divider"></li>
+					<li><a href="#">Separated link</a></li>
+				</ul>
+			</div>
+			<div class="btn-group m-right-5">
+				<button type="button" class="btn btn-success">Action</button>
+				<button type="button" class="btn btn-success dropdown-toggle" data-toggle="dropdown">
+					<span class="caret"></span>
+				</button>
+				<ul class="dropdown-menu" role="menu">
+					<li><a href="#">Action</a></li>
+					<li><a href="#">Another action</a></li>
+					<li><a href="#">Something else here</a></li>
+					<li class="divider"></li>
+					<li><a href="#">Separated link</a></li>
+				</ul>
+			</div>
+			<div class="btn-group m-right-5">
+				<button type="button" class="btn btn-warning">Action</button>
+				<button type="button" class="btn btn-warning dropdown-toggle" data-toggle="dropdown">
+					<span class="caret"></span>
+				</button>
+				<ul class="dropdown-menu" role="menu">
+					<li><a href="#">Action</a></li>
+					<li><a href="#">Another action</a></li>
+					<li><a href="#">Something else here</a></li>
+					<li class="divider"></li>
+					<li><a href="#">Separated link</a></li>
+				</ul>
+			</div>
+			<div class="btn-group">
+				<button type="button" class="btn btn-danger">Action</button>
+				<button type="button" class="btn btn-danger dropdown-toggle" data-toggle="dropdown">
+					<span class="caret"></span>
+				</button>
+				<ul class="dropdown-menu" role="menu">
+					<li><a href="#">Action</a></li>
+					<li><a href="#">Another action</a></li>
+					<li><a href="#">Something else here</a></li>
+					<li class="divider"></li>
+					<li><a href="#">Separated link</a></li>
+				</ul>
+			</div>
+		</div>
+		
+<pre class="prettyprint linenums">
+&lt;!-- Split button --&gt;
+&lt;div class="btn-group"&gt;
+    &lt;button type="button" class="btn btn-danger"&gt;Action&lt;/button&gt;
+    &lt;button type="button" class="btn btn-danger dropdown-toggle" data-toggle="dropdown"&gt;
+        &lt;span class="caret"&gt;&lt;/span&gt;
+    &lt;/button&gt;
+    &lt;ul class="dropdown-menu" role="menu"&gt;
+        &lt;li&gt;&lt;a href="#"&gt;Action&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="#"&gt;Another action&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="#"&gt;Something else here&lt;/a&gt;&lt;/li&gt;
+        &lt;li class="divider"&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="#"&gt;Separated link&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+&lt;/div&gt;
+</pre>
+
+		<h4 class="headline">
+			2.3 Application Button
+			<span class="line"></span>
+		</h4>	
+				
+		<p>Use <code>.application-btn</code> class to create an application button.</p>
+		
+		<div class="m-bottom-20">
+			<a class="btn btn-danger application-btn"><i class="fa fa-envelope"></i><span>Email</span></a>
+			<a class="btn btn-info application-btn"><i class="fa fa-picture-o"></i><span>Gallery</span></a>
+		</div>
+		
+<pre class="prettyprint linenums">
+&lt;!-- Application button --&gt;	
+&lt;a class="btn btn-danger application-btn"&gt;&lt;i class="fa fa-envelope"&gt;&lt;/i&gt;&lt;span&gt;Email&lt;/span&gt;&lt;/a&gt;
+</pre>
+
+		<h3 class="headline">
+			3. Widget
+			<span class="line"></span>
+			<a class="to-top" href="#">Back to top <i class="fa fa-angle-double-up"></i></a>
+		</h3>
+		
+		<div class="smart-widget">
+			<div class="smart-widget-header">
+				Widget
+				<span class="smart-widget-option">
+					<span class="refresh-icon-animated">
+						<i class="fa fa-circle-o-notch fa-spin"></i>
+					</span>
+                    <a href="#" class="widget-toggle-hidden-option">
+                        <i class="fa fa-cog"></i>
+                    </a>
+                    <a href="#" class="widget-collapse-option" data-toggle="collapse">
+                        <i class="fa fa-chevron-up"></i>
+                    </a>
+                    <a href="#" class="widget-refresh-option">
+                        <i class="fa fa-refresh"></i>
+                    </a>
+                    <a href="#" class="widget-remove-option">
+                        <i class="fa fa-times"></i>
+                    </a>
+                </span>
+			</div>
+			<div class="smart-widget-inner">
+				<div class="smart-widget-hidden-section">
+					<ul class="widget-color-list clearfix">
+						<li style="background-color:#20232b;" data-color="widget-dark"></li>
+						<li style="background-color:#4c5f70;" data-color="widget-dark-blue"></li>
+						<li style="background-color:#23b7e5;" data-color="widget-blue"></li>
+						<li style="background-color:#2baab1;" data-color="widget-green"></li>
+						<li style="background-color:#edbc6c;" data-color="widget-yellow"></li>
+						<li style="background-color:#fbc852;" data-color="widget-orange"></li>
+						<li style="background-color:#e36159;" data-color="widget-red"></li>
+						<li style="background-color:#7266ba;" data-color="widget-purple"></li>
+						<li style="background-color:#f5f5f5;" data-color="widget-light-grey"></li>
+						<li style="background-color:#fff;" data-color="reset"></li>
+					</ul>
+				</div>
+				<div class="smart-widget-body">
+					Widget Body goes here...
+				</div>
+			</div>
+		</div>
+		
+<pre class="prettyprint linenums">
+    &lt;div class="smart-widget"&gt;
+        &lt;div class="smart-widget-header"&gt;
+            Widget
+            &lt;span class="smart-widget-option"&gt;
+                &lt;span class="refresh-icon-animated"&gt;
+                    &lt;i class="fa fa-circle-o-notch fa-spin"&gt;&lt;/i&gt;
+                &lt;/span&gt;
+                &lt;a href="#" class="widget-toggle-hidden-option"&gt;
+                    &lt;i class="fa fa-cog"&gt;&lt;/i&gt;
+                &lt;/a&gt;
+                &lt;a href="#" class="widget-collapse-option" data-toggle="collapse"&gt;
+                    &lt;i class="fa fa-chevron-up"&gt;&lt;/i&gt;
+                &lt;/a&gt;
+                &lt;a href="#" class="widget-refresh-option"&gt;
+                    &lt;i class="fa fa-refresh"&gt;&lt;/i&gt;
+                &lt;/a&gt;
+                &lt;a href="#" class="widget-remove-option"&gt;
+                    &lt;i class="fa fa-times"&gt;&lt;/i&gt;
+                &lt;/a&gt;
+            &lt;/span&gt;
+        &lt;/div&gt;
+        &lt;div class="smart-widget-inner"&gt;
+            &lt;div class="smart-widget-hidden-section"&gt;
+                &lt;ul class="widget-color-list clearfix"&gt;
+                    &lt;li style="background-color:#20232b;" data-color="widget-dark"&gt;&lt;/li&gt;
+                    &lt;li style="background-color:#4c5f70;" data-color="widget-dark-blue"&gt;&lt;/li&gt;
+                    &lt;li style="background-color:#23b7e5;" data-color="widget-blue"&gt;&lt;/li&gt;
+                    &lt;li style="background-color:#2baab1;" data-color="widget-green"&gt;&lt;/li&gt;
+                    &lt;li style="background-color:#edbc6c;" data-color="widget-yellow"&gt;&lt;/li&gt;
+                    &lt;li style="background-color:#fbc852;" data-color="widget-orange"&gt;&lt;/li&gt;
+                    &lt;li style="background-color:#e36159;" data-color="widget-red"&gt;&lt;/li&gt;
+                    &lt;li style="background-color:#7266ba;" data-color="widget-purple"&gt;&lt;/li&gt;
+                    &lt;li style="background-color:#f5f5f5;" data-color="widget-light-grey"&gt;&lt;/li&gt;
+                    &lt;li style="background-color:#fff;" data-color="reset"&gt;&lt;/li&gt;
+                &lt;/ul&gt;
+            &lt;/div&gt;
+            &lt;div class="smart-widget-body"&gt;
+                Widget Body goes here...
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+</pre>
+
+		<h4 class="headline">
+			3.1 Delete Confirmation Widget
+			<span class="line"></span>
+		</h4>
+
+		<p>The modal that appears when clicking on widget's remove button</p>
+
+<pre class="prettyprint linenums">
+    &lt;div class="custom-popup delete-widget-popup delete-confirmation-popup" id="deleteWidgetConfirm"&gt;
+        &lt;div class="popup-header text-center"&gt;
+            &lt;span class="fa-stack fa-4x"&gt;
+                &lt;i class="fa fa-circle fa-stack-2x"&gt;&lt;/i&gt;
+                &lt;i class="fa fa-lock fa-stack-1x fa-inverse">&lt;/i&gt;
+            &lt;/span&gt;
+        &lt;/div&gt;
+        &lt;div class="popup-body text-center"&gt;
+            &lt;h5&gt;Are you sure to delete this widget?&lt;/h5&gt;
+            &lt;strong class="block m-top-xs"&gt;&lt;i class="fa fa-exclamation-circle m-right-xs text-danger"&gt;&lt;/i&gt;This action cannot be undone&lt;/strong&gt;
+		
+            &lt;div class="text-center m-top-lg"&gt;
+                &lt;a class="btn btn-success m-right-sm remove-widget-btn">Delete&lt;/a&gt;
+                &lt;a class="btn btn-default deleteWidgetConfirm_close">Cancel&lt;/a&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+</pre>
+		<h3 class="headline">
+			4. Table
+			<span class="line"></span>
+			<a class="to-top" href="#">Back to top <i class="fa fa-angle-double-up"></i></a>
+		</h3>
+		
+		<div class="panel">
+			<table class="table">
+				<thead>
+					<tr>
+						<th>#</th>
+						<th>First Name</th>
+						<th>Last Name</th>
+						<th>Username</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>1</td>
+						<td>Mark</td>
+						<td>Otto</td>
+						<td>@mdo</td>
+					</tr>
+					<tr>
+						<td>2</td>
+						<td>Jacob</td>
+						<td>Thornton</td>
+						<td>@fat</td>
+					</tr>
+					<tr>
+						<td>3</td>
+						<td>Larry</td>
+						<td>the Bird</td>
+						<td>@twitter</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+<pre class="prettyprint linenums">
+&lt;table class="table"&gt;
+    ...
+&lt;/table&gt;
+</pre>
+		<h4 class="headline">
+			4.1 Striped rows
+			<span class="line"></span>
+		</h4>
+		<div class="panel">
+			<table class="table table-striped">
+				<thead>
+					<tr>
+						<th>#</th>
+						<th>First Name</th>
+						<th>Last Name</th>
+						<th>Username</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>1</td>
+						<td>Mark</td>
+						<td>Otto</td>
+						<td>@mdo</td>
+					</tr>
+					<tr>
+						<td>2</td>
+						<td>Jacob</td>
+						<td>Thornton</td>
+						<td>@fat</td>
+					</tr>
+					<tr>
+						<td>3</td>
+						<td>Larry</td>
+						<td>the Bird</td>
+						<td>@twitter</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+
+<pre class="prettyprint linenums">
+&lt;table class="table table-striped"&gt;
+    ...
+&lt;/table&gt;
+</pre>
+		
+		<h4 class="headline">
+			4.2 Bordered table
+			<span class="line"></span>
+		</h4>
+		
+		<div class="panel">
+			<table class="table table-bordered">
+				<thead>
+					<tr>
+						<th>#</th>
+						<th>First Name</th>
+						<th>Last Name</th>
+						<th>Username</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>1</td>
+						<td>Mark</td>
+						<td>Otto</td>
+						<td>@mdo</td>
+					</tr>
+					<tr>
+						<td>2</td>
+						<td>Jacob</td>
+						<td>Thornton</td>
+						<td>@fat</td>
+					</tr>
+					<tr>
+						<td>3</td>
+						<td>Larry</td>
+						<td>the Bird</td>
+						<td>@twitter</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+		
+<pre class="prettyprint linenums">
+&lt;table class="table table-bordered"&gt;
+    ...
+&lt;/table&gt;
+</pre>
+		<h3 class="headline">
+			5. Form Element
+			<span class="line"></span>
+			<a class="to-top" href="#">Back to top <i class="fa fa-angle-double-up"></i></a>
+		</h3>
+		
+		<p>
+			Individual form controls automatically receive some global styling. All textual <code>&lt;input&gt;</code>, <code>&lt;textarea&gt;</code>, and <code>&lt;select&gt;</code> elements with <code>.form-control</code> are set to <code>width: 100%;</code> by default. Wrap labels and controls in <code>.form-group</code> for optimum spacing.
+		</p>
+		
+		<div class="panel panel-default">
+			<div class="panel-heading">
+				Basic Example
+			</div>
+			<form>
+				<div class="panel-body">
+					<div class="form-group">
+						<label for="exampleInputEmail1">Email address</label>
+						<input type="email" class="form-control" id="exampleInputEmail1" placeholder="Enter email">
+					</div>
+					<div class="form-group">
+						<label for="exampleInputPassword1">Password</label>
+						<input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+					</div>
+					<div class="form-group">
+						<label>File input</label>
+						<input type="file" id="upload-demo">
+					</div>
+					<p class="help-block">Example block-level help text here.</p>
+					<div class="custom-checkbox">
+						<input type="checkbox" id="checkbox1">
+						<label for="checkbox1"></label>
+					</div>
+					Check me out
+				</div>
+				<div class="panel-footer">
+					<button type="submit" class="btn btn-default">Submit</button>
+				</div>
+			</form>
+		</div>
+<pre class="prettyprint linenums">
+&lt;div class="panel panel-default"&gt;
+    &lt;div class="panel-heading"&gt;
+        Basic Example
+    &lt;/div&gt;
+    &lt;form&gt;
+        &lt;div class="panel-body"&gt;
+            &lt;div class="form-group"&gt;
+                &lt;label for="exampleInputEmail1"&gt;Email address&lt;/label&gt;
+                &lt;input type="email" class="form-control" id="exampleInputEmail1" placeholder="Enter email"&gt;
+            &lt;/div&gt;
+            &lt;div class="form-group"&gt;
+                &lt;label for="exampleInputPassword1"&gt;Password&lt;/label&gt;
+                &lt;input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password"&gt;
+            &lt;/div&gt;
+            &lt;div class="form-group"&gt;
+                &lt;label for="exampleInputFile"&gt;File input&lt;/label&gt;
+                &lt;input type="file" id="upload-demo"&gt;
+            &lt;/div&gt;
+		
+            &lt;p class="help-block">Example block-level help text here.&lt;/p&gt; &lt;!-- Help text --&gt;
+		
+            &lt;div class="custom-checkbox"&gt;
+                &lt;input type="checkbox" id="checkbox1"&gt;
+                &lt;label for="checkbox1"&gt;&lt;/label&gt;
+            &lt;/div&gt;
+            Check me out
+        &lt;/div&gt;
+        &lt;div class="panel-footer"&gt;
+            &lt;button type="submit" class="btn btn-default"&gt;Submit&lt;/button&gt;
+        &lt;/div&gt;
+    &lt;/form&gt;
+&lt;/div&gt;
+</pre>
+		<h4 class="headline">
+			5.1 Inline Form
+			<span class="line"></span>
+		</h4>
+		<p>Add <code>.form-inline</code> for left-aligned and inline-block controls for a compact layout.</p>
+		
+		<div class="panel panel-default">
+			<div class="panel-body">
+				<form class="form-inline">
+					<div class="form-group">
+						<label class="sr-only" for="exampleInputEmail2">Email address</label>
+						<input type="email" class="form-control" id="exampleInputEmail2" placeholder="Enter email">
+					</div>
+					<div class="form-group">
+						<label class="sr-only" for="exampleInputPassword2">Password</label>
+						<input type="password" class="form-control" id="exampleInputPassword2" placeholder="Password">
+					</div>
+					<div class="custom-checkbox">
+						<input type="checkbox" id="checkbox2">
+						<label for="checkbox2"></label>
+					</div>
+					Remember me
+					<button type="submit" class="btn btn-default">Sign in</button>
+				</form>
+			</div>
+		</div>
+
+<pre class="prettyprint linenums">
+&lt;div class="panel panel-default"&gt;
+    &lt;div class="panel-body"&gt;
+        &lt;form class="form-inline"&gt;
+            &lt;div class="form-group"&gt;
+                &lt;label class="sr-only" for="exampleInputEmail2"&gt;Email address&lt;/label&gt;
+                &lt;input type="email" class="form-control" id="exampleInputEmail2" placeholder="Enter email"&gt;
+            &lt;/div&gt;
+            &lt;iv class="form-group"&gt;
+                &lt;label class="sr-only" for="exampleInputPassword2"&gt;Password&lt;/label&gt;
+                &lt;input type="password" class="form-control" id="exampleInputPassword2" placeholder="Password"&gt;
+            &lt;/div&gt;
+            &lt;div class="custom-checkbox"&gt;
+               &lt;input type="checkbox" id="checkbox2"&gt;
+               &lt;label for="checkbox2"&gt;&lt;/label&gt;
+            &lt;/div&gt;
+            Remember me
+            &lt;button type="submit" class="btn btn-default">Sign in&lt;/button&gt;
+        &lt;/form&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+</pre>
+
+		<h4 class="headline">
+			5.2 Horizontal form
+			<span class="line"></span>
+		</h4>
+		<p>
+			Use Bootstrap's predefined grid classes to align labels and groups of form controls in a horizontal layout by adding <code>.form-horizontal</code> to the <code>form</code>. Doing so changes <code>.form-groups</code> to behave as grid rows, so no need for <code>.row</code>.
+		</p>
+		<div class="panel panel-default">
+			<div class="panel-heading">
+				Horizontal form
+			</div>
+			
+			<form class="form-horizontal">
+				<div class="panel-body">
+					<div class="form-group">
+						<label for="inputUsername1" class="col-lg-2 control-label">Username</label>
+						<div class="col-lg-10">
+							<input type="text" class="form-control" id="inputUsername1" placeholder="Username">
+						</div>
+					</div>
+					<div class="form-group">
+						<label for="inputPassword3" class="col-lg-2 control-label">Password</label>
+						<div class="col-lg-10">
+							<input type="password" class="form-control" id="inputPassword3" placeholder="Password">
+						</div>
+					</div>
+					<div class="form-group">
+						<label class="col-lg-2 control-label">Gender</label>
+						<div class="col-lg-10">
+							<div class="radio inline-block">
+								<div class="custom-radio m-right-xs">
+									<input type="radio" id="radio1" name="inlineRadio">
+									<label for="radio1"></label>
+								</div>
+								Male
+							</div>
+							<div class="radio inline-block">
+								<div class="custom-radio m-right-xs">
+									<input type="radio" id="radio2" name="inlineRadio">
+									<label for="radio2"></label>
+								</div>
+								Female
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="panel-footer text-right">
+					<button type="submit" class="btn btn-success">Submit</button>
+					<button type="reset" class="btn btn-success">Clear</button>
+				</div>
+			</form>
+		</div>
+		
+<pre class="prettyprint linenums">
+&lt;div class="panel panel-default"&gt;
+    &lt;div class="panel-heading"&gt;
+        Horizontal form
+    &lt;/div&gt;
+			
+    &lt;form class="form-horizontal"&gt;
+        &lt;div class="panel-body"&gt;
+            &lt;div class="form-group"&gt;
+                &lt;label for="inputUsername1" class="col-lg-2 control-label">Username&lt;/label&gt;
+                &lt;div class="col-lg-10"&gt;
+                    &lt;input type="text" class="form-control" id="inputUsername1" placeholder="Username"&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div class="form-group"&gt;
+                &lt;label for="inputPassword3" class="col-lg-2 control-label">Password&lt;/label&gt;
+                &lt;div class="col-lg-10"&gt;
+                    &lt;input type="password" class="form-control" id="inputPassword3" placeholder="Password"&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div class="form-group"&gt;
+                &lt;label class="col-lg-2 control-label">Gender&lt;/label&gt;
+                &lt;div class="col-lg-10"&gt;
+                    &lt;div class="radio inline-block"&gt;
+                        &lt;div class="custom-radio m-right-xs"&gt;
+                            &lt;input type="radio" id="radio1" name="inlineRadio"&gt;
+                            &lt;label for="radio1"&gt;&lt;/label&gt;
+                        &lt;/div&gt;
+                        Male
+                    &lt;/div&gt;
+                    &lt;div class="radio inline-block"&gt;
+                        &lt;div class="custom-radio m-right-xs"&gt;
+                            &lt;input type="radio" id="radio2" name="inlineRadio"&gt;
+                            &lt;label for="radio2"&gt;&lt;/label&gt;
+                        &lt;/div&gt;
+                        Female
+                    &lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div class="panel-footer text-right"&gt;
+            &lt;button type="submit" class="btn btn-success">Submit&lt;/button&gt;
+            &lt;button type="reset" class="btn btn-success">Clear&lt;/button>
+        &lt;/div&gt;
+    &lt;/form&gt;
+&lt;/div&gt;
+</pre>
+	
+		<h3 class="headline" id="section4">
+			6. Components
+			<span class="line"></span>
+			<a class="to-top" href="#">Back to top <i class="fa fa-angle-double-up"></i></a>
+		</h3>
+
+		<h4>
+			6.1 Statistic Widget
+		</h4>
+
+		<div class="row m-top-md">
+			<div class="col-lg-3 col-sm-6">
+				<div class="statistic-box bg-danger m-bottom-md">
+					<div class="statistic-title">
+						Today Visitors
+					</div>
+
+					<div class="statistic-value">
+						96.7k
+					</div>
+
+					<div class="m-top-md">11% Higher than last week</div>
+
+					<div class="statistic-icon-background">
+						<i class="ion-eye"></i>
+					</div>
+				</div>
+			</div><!-- ./col -->
+
+			<div class="col-lg-3 col-sm-6">
+				<div class="statistic-box bg-info m-bottom-md">
+					<div class="statistic-title">
+						Today Sales
+					</div>
+
+					<div class="statistic-value">
+						751
+					</div>
+
+					<div class="m-top-md">8% Higher than last week</div>
+
+					<div class="statistic-icon-background">
+						<i class="ion-ios7-cart-outline"></i>
+					</div>
+				</div>
+			</div><!-- ./col -->
+
+			<div class="col-lg-3 col-sm-6">
+				<div class="statistic-box bg-purple m-bottom-md">
+					<div class="statistic-title">
+						Today Users
+					</div>
+
+					<div class="statistic-value">
+						129
+					</div>
+
+					<div class="m-top-md">3% Higher than last week</div>
+
+					<div class="statistic-icon-background">
+						<i class="ion-person-add"></i>
+					</div>
+				</div>
+			</div><!-- ./col -->
+
+			<div class="col-lg-3 col-sm-6">
+				<div class="statistic-box bg-success m-bottom-md">
+					<div class="statistic-title">
+						Today Earnings
+					</div>
+
+					<div class="statistic-value">
+						$124.45k
+					</div>
+
+					<div class="m-top-md">7% Higher than last week</div>
+
+					<div class="statistic-icon-background">
+						<i class="ion-stats-bars"></i>
+					</div>
+				</div>
+			</div><!-- ./col -->
+		</div><!-- ./row -->
+
+<pre class="prettyprint linenums">
+&lt;div class="row"&gt;
+    &lt;div class="col-lg-3 col-sm-6"&gt;
+        &lt;div class="statistic-box bg-danger m-bottom-md"&gt;
+            &lt;div class="statistic-title"&gt;
+                Today Visitors
+            &lt;/div&gt;
+
+            &lt;div class="statistic-value"&gt;
+                96.7k
+            &lt;/div&gt;
+
+            &lt;div class="m-top-md">11% Higher than last week&lt;/div&gt;
+
+            &lt;div class="statistic-icon-background"&gt;
+                &lt;i class="ion-eye"&gt;&lt;/i&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+</pre>
+
+		<div class="row">
+			<div class="col-md-4">
+				<div class="widget-stat clearfix">
+					<span class="stat-icon bg-info bounceIn animation-delay3"><i class="fa fa-bar-chart-o"></i></span>
+					<div class="stat-info">
+						<small class="text-muted text-upper">User Visit</small>
+						<span>176</span>
+					</div>
+				</div>
+			</div><!-- ./col -->
+		</div><!-- ./row -->
+
+<pre class="prettyprint linenums">
+&lt;div class="widget-stat clearfix"&gt;
+    &lt;span class="stat-icon bg-info bounceIn animation-delay3"&gt;&lt;i class="fa fa-bar-chart-o"&gt;&lt;/i&gt;&lt;/span&gt;
+    &lt;div class="stat-info"&gt;
+        &lt;small class="text-muted text-upper"&gt;User Visit&lt;/small&gt;
+        &lt;span&gt;176&lt;/span&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+</pre>
+		<div class="row">
+			<div class="col-md-4">
+				<div class="row">
+					<div class="col-md-6">
+						<div class="widget-stat3 bg-primary">
+							<div class="widget-stat-icon">
+								<i class="fa fa-facebook fa-3x"></i>
+							</div>
+							<small class="text-upper">Like</small>
+							<h3 class="no-margin">5123</h3>
+						</div>
+					</div><!-- ./col -->
+					<div class="col-md-6">
+						<div class="widget-stat3 bg-info">
+							<div class="widget-stat-icon">
+								<i class="fa fa-twitter fa-3x"></i>
+							</div>
+							<small class="text-upper">Follower</small>
+							<h3 class="no-margin">981</h3>
+						</div>	
+					</div><!-- ./col -->
+				</div><!-- ./row -->
+			</div><!-- ./col -->
+		</div><!-- ./row -->
+<pre class="prettyprint linenums">
+&lt;div class="row">
+    &lt;div class="col-md-4">
+        &lt;div class="row">
+            &lt;div class="col-md-6">
+                &lt;div class="widget-stat3 bg-primary">
+                    &lt;div class="widget-stat-icon">
+                        &lt;i class="fa fa-facebook fa-3x">&lt;/i&gt;
+                    &lt;/div>
+                    &lt;small class="text-upper">Like&lt;/small&gt;
+                    &lt;h3 class="no-margin">5123&lt;/h3&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div class="col-md-6"&gt;
+                &lt;div class="widget-stat3 bg-info"&gt;
+                    &lt;div class="widget-stat-icon"&gt;
+                        &lt;i class="fa fa-twitter fa-3x">&lt;/i&gt;
+                    &lt;/div&gt;
+                    &lt;small class="text-upper">Follower&lt;/small&gt;
+                    &lt;h3 class="no-margin">981&lt;/h3&gt;
+                &lt;/div&gt;	
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+</pre>
+
+		<div class="row">
+			<div class="col-md-4">
+				<div class="widget-stat2">
+					<div class="stat-icon bg-success">
+						<i class="fa fa-shopping-cart"></i>
+					</div>
+					<div class="stat-value">
+						<div class="h2">199</div>
+						<div class="text-muted">Sales</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+<pre class="prettyprint linenums">
+&lt;div class="row"&gt;
+    &lt;div class="col-md-4"&gt;
+        &lt;div class="widget-stat2"&gt;
+            &lt;div class="stat-icon bg-success"&gt;
+                &lt;i class="fa fa-shopping-cart">&lt;/i&gt;
+            &lt;/div&gt;
+            &lt;div class="stat-value"&gt;
+                &lt;div class="h2">199&lt;/div&gt;
+                &lt;div class="text-muted">Sales&lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+</pre>
+	
+		<div class="row">
+			<div class="col-md-4">
+				<div class="panel panel-default">
+					<div class="panel-body text-center bg-primary text-white padding-lg">
+						<i class="fa fa-facebook" style="font-size:58px;"></i>
+					</div>
+					<div class="panel-footer bg-white">
+						<div class="row">
+							<div class="col-xs-6 text-center">
+								<div class="h3 m-top-sm">981</div>
+								<div class="text-muted">Like</div>
+							</div><!-- .col -->
+							<div class="col-xs-6 text-center">
+								<div class="h3 m-top-sm">1271</div>
+								<div class="text-muted">Follower</div>
+							</div><!-- .col -->
+						</div><!-- ./row -->
+					</div>
+				</div>
+			</div>
+		</div>
+
+<pre class="prettyprint linenums">
+&lt;div class="row"&gt;
+    &lt;div class="col-md-4"&gt;
+        &lt;div class="panel panel-default"&gt;
+            &lt;div class="panel-body text-center bg-primary text-white padding-lg"&gt;
+                &lt;i class="fa fa-facebook" style="font-size:58px;">&lt;/i&gt;
+            &lt;/div&gt;
+            &lt;div class="panel-footer bg-white"&gt;
+                &lt;div class="row"&gt;
+                    &lt;div class="col-xs-6 text-center"&gt;
+                        &lt;div class="h3 m-top-sm">981&lt;/div&gt;
+                        &lt;div class="text-muted">Like&lt;/div&gt;
+                    &lt;/div&gt;
+                    &lt;div class="col-xs-6 text-center"&gt;
+                        &lt;div class="h3 m-top-sm">1271&lt;/div&gt;
+                        &lt;div class="text-muted">Follower&lt;/div&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+</pre>
+
+		<h4 class="m-top-lg headline">
+			6.2 Weather Widget
+			<span class="line">
+		</h4>
+
+		<p>Simplify Admin use <a href="https://github.com/darkskyapp/skycons/" class="text-important">Skycons</a> to create the animated weather glyphs so if you want to create these animated weather glyphs, you have to add <code>skycons.js</code> to your page.</p>
+
+		<p><code>skycons.js</code> is located under the <code>js/uncompressed</code> directory.</p>
+
+		<div class="row m-top-md">
+			<div class="col-md-3">
+				<div class="panel panel-default weather-widget">
+					<div class="panel-body bg-success text-white">
+						<div class="h4 text-white text-center">Today Weather</div>
+
+						<div class="m-top-md m-bottom-md text-center">
+							<canvas id="skycon1" width="120" height="120"></canvas>
+						</div>
+
+						<div class="degree-text text-center">22°</div>
+					</div>
+					<div class="panel-footer bg-white text-center padding-md">
+						<div class="h4 text-upper">New York <i class="fa fa-map-marker"></i></div>
+						<div class="text-muted font-12 m-top-xs">Rainy Day</div>
+					</div>
+				</div><!-- ./panel -->
+			</div><!-- ./col -->
+			<div class="col-md-3">
+				<div class="panel panel-default weather-widget">
+					<div class="panel-body bg-warning text-white">
+						<div class="h4 text-white text-center">Today Weather</div>
+
+						<div class="m-top-md m-bottom-md text-center">
+							<canvas id="skycon2" width="120" height="120"></canvas>
+						</div>
+
+						<div class="degree-text text-center">37°</div>
+					</div>
+					<div class="panel-footer bg-white text-center padding-md">
+						<div class="h4 text-upper">London <i class="fa fa-map-marker"></i></div>
+						<div class="text-muted font-12 m-top-xs">Cloudy Day</div>
+					</div>
+				</div><!-- ./panel -->
+			</div><!-- ./col -->
+		</div><!-- ./row -->
+
+<pre class="prettyprint linenums">
+&lt;div class="row"&gt;
+    &lt;div class="col-md-3"&gt;
+        &lt;div class="panel panel-default weather-widget"&gt;
+            &lt;div class="panel-body bg-success text-white"&gt;
+                &lt;div class="h4 text-white text-center">Today Weather&lt;/div&gt;
+                &lt;div class="m-top-md m-bottom-md text-center"&gt;
+                    &lt;canvas id="skycon1" width="120" height="120"&gt;&lt;/canvas&gt;
+                &lt;/div&gt;
+
+                &lt;div class="degree-text text-center"&gt;22°&lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div class="panel-footer bg-white text-center padding-md"&gt;
+                &lt;div class="h4 text-upper"&gt;New York &lt;i class="fa fa-map-marker"&gt;&lt;/i&gt;&lt;/div&gt;
+                &lt;div class="text-muted font-12 m-top-xs">Rainy Day&lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class="col-md-3"&gt;
+        &lt;div class="panel panel-default weather-widget"&gt;
+            &lt;div class="panel-body bg-warning text-white"&gt;
+                &lt;div class="h4 text-white text-center"&gt;Today Weather&lt;/div&gt;
+                &lt;div class="m-top-md m-bottom-md text-center"&gt;
+                    &lt;canvas id="skycon2" width="120" height="120"&gt;&lt;/canvas&gt;
+                &lt;/div&gt;
+
+                &lt;div class="degree-text text-center"&gt;37°&lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div class="panel-footer bg-white text-center padding-md"&gt;
+                &lt;div class="h4 text-upper"&gt;London &lt;i class="fa fa-map-marker"&gt;&lt;/i&gt;&lt;/div&gt;
+                &lt;div class="text-muted font-12 m-top-xs"&gt;Cloudy Day&lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+</pre>
+	
+		<div class="row m-top-lg">
+			<div class="col-md-4">
+				<div class="weather-widget2">
+					<div class="widget-weather-body bg-warning">
+						<div class="row">
+		                    <div class="col-xs-6">
+		                    	<div class="current-city">Bangkok, TH</div>
+		                    	<div class="current-temp">32°C</div>
+		                    	<div class="current-day">Wednesday, 21 June</div>
+		                    </div>
+		                    <div class="col-xs-6 text-right">
+		                      <canvas id="skycon3" width="120" height="120"></canvas>
+		                    </div>
+		                </div>
+					</div>
+
+					<ul class="weather-statistic clearfix">
+						<li>
+							<div class="text-upper h5">Mon</div>
+							<canvas id="skycon-sm1" width="40" height="40"></canvas>
+						</li>
+						<li>
+							<div class="text-upper h5">Tue</div>
+							<canvas id="skycon-sm2" width="40" height="40"></canvas>
+						</li>
+						<li>
+							<div class="text-upper h5">Wed</div>
+							<canvas id="skycon-sm3" width="40" height="40"></canvas>
+						</li>
+					</ul>
+				</div>
+			</div><!-- .col -->
+		</div><!-- ./row -->
+
+<pre class="prettyprint linenums">
+&lt;div class="row"&gt;
+    &lt;div class="col-md-4"&gt;
+        &lt;div class="weather-widget2"&gt;
+            &lt;div class="widget-weather-body bg-warning"&gt;
+                &lt;div class="row"&gt;
+                    &lt;div class="col-xs-6"&gt;
+                        &lt;div class="current-city">Bangkok, TH&lt;/div&gt;
+                        &lt;div class="current-temp"&gt;32°C&lt;/div&gt;
+                        &lt;div class="current-day">Wednesday, 21 June&lt;/div&gt;
+                    &lt;/div&gt;
+                    &lt;div class="col-xs-6 text-right"&gt;
+                        &lt;canvas id="skycon3" width="120" height="120"&gt;&lt;/canvas&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+
+            &lt;ul class="weather-statistic clearfix"&gt;
+                &lt;li&gt;
+                    &lt;div class="text-upper h5"&gt;Mon&lt;/div&gt;
+                    &lt;canvas id="skycon-sm1" width="40" height="40"&gt;&lt;/canvas&gt;
+                &lt;/li&gt;
+                &lt;li&gt;
+                    &lt;div class="text-upper h5"&gt;Tue&lt;/div&gt;
+                    &lt;canvas id="skycon-sm2" width="40" height="40"&gt;&lt;/canvas&gt;
+                &lt;/li&gt;
+                &lt;li&gt;
+                    &lt;div class="text-upper h5">Wed&lt;/div&gt;
+                    &lt;canvas id="skycon-sm3" width="40" height="40"&gt;&lt;/canvas&gt;
+                &lt;/li&gt;
+            &lt;/ul&gt;
+        &lt;/div&gt;
+    &lt;div&gt;
+&lt;/div&gt;
+</pre>
+
+		<h4 class="m-top-lg headline">
+			6.3 Calendar widget
+			<span class="line">
+		</h4>
+
+		<p>Simplify Admin use <a href="http://www.eyecon.ro/datepicker/" class="text-important">Datepicker</a> to create the calendar so if you want to create these calendar, you have to add <code>datepicker.js</code> and <code>datepicker.css</code> to your page.</p>
+
+		<p><code>datepicker.css</code> is located under the <code>css</code> directory.</p>
+		<p><code>datepicker.js</code> is located under the <code>js/uncompressed</code> directory.</p>
+
+		<div class="row m-top-md">
+			<div class="col-md-4">
+				<div class="smart-widget">
+					<div class="smart-widget-header">
+						<i class="fa fa-calendar m-right-xs"></i>Calendar
+						<span class="smart-widget-option">
+							<span class="refresh-icon-animated">
+								<i class="fa fa-circle-o-notch fa-spin"></i>
+							</span>
+                            <a href="#" class="widget-toggle-hidden-option">
+                                <i class="fa fa-cog"></i>
+                            </a>
+                            <a href="#" class="widget-collapse-option" data-toggle="collapse">
+                                <i class="fa fa-chevron-up"></i>
+                            </a>
+                            <a href="#" class="widget-refresh-option">
+                                <i class="fa fa-refresh"></i>
+                            </a>
+                            <a href="#" class="widget-remove-option">
+                                <i class="fa fa-times"></i>
+                            </a>
+                        </span>
+					</div>
+					<div class="smart-widget-inner">
+						<div class="smart-widget-hidden-section">
+							<ul class="widget-color-list clearfix">
+								<li style="background-color:#20232b;" data-color="widget-dark"></li>
+								<li style="background-color:#4c5f70;" data-color="widget-dark-blue"></li>
+								<li style="background-color:#23b7e5;" data-color="widget-blue"></li>
+								<li style="background-color:#2baab1;" data-color="widget-green"></li>
+								<li style="background-color:#edbc6c;" data-color="widget-yellow"></li>
+								<li style="background-color:#fbc852;" data-color="widget-orange"></li>
+								<li style="background-color:#e36159;" data-color="widget-red"></li>
+								<li style="background-color:#7266ba;" data-color="widget-purple"></li>
+								<li style="background-color:#f5f5f5;" data-color="widget-light-grey"></li>
+								<li style="background-color:#fff;" data-color="reset"></li>
+							</ul>
+						</div>
+						<div class="smart-widget-body no-padding no-margin bg-grey">
+							<p id="calendar" class="custom-calendar no-margin full-width calendar-demo"></p>
+						</div>
+						<ul class="list-group no-border">
+						    <li class="list-group-item">
+						    	Meeting
+						    	<span class="badge badge-success">7:30</span>
+						    </li>
+						    <li class="list-group-item">
+						    	Database Migration
+						    	<span class="badge badge-danger">11:15</span>
+						    </li>
+						</ul>
+					</div><!-- ./smart-widget-inner -->
+				</div><!-- ./smart-widget -->
+			</div><!-- ./col -->
+		</div><!-- ./row -->
+
+<pre class="prettyprint linenums">
+&lt;div class="row"&gt;
+    &lt;div class="col-md-4"&gt;
+        &lt;div class="smart-widget"&gt;
+            &lt;div class="smart-widget-header"&gt;
+                &lt;i class="fa fa-calendar m-right-xs"&gt;&lt;/i&gt;Calendar
+                &lt;span class="smart-widget-option"&gt;
+                    &lt;span class="refresh-icon-animated"&gt;
+                        &lt;i class="fa fa-circle-o-notch fa-spin">&lt;/i&gt;
+                    &lt;/span&gt;
+                    &lt;a href="#" class="widget-toggle-hidden-option"&gt;
+                        &lt;i class="fa fa-cog"&gt;&lt;/i&gt;
+                    &lt;/a&gt;
+                    &lt;a href="#" class="widget-collapse-option" data-toggle="collapse"&gt;
+                        &lt;i class="fa fa-chevron-up"&gt;&lt;/i&gt;
+                    &lt;/a&gt;
+                    &lt;a href="#" class="widget-refresh-option"&gt;
+                        &lt;i class="fa fa-refresh"&gt;&lt;/i&gt;
+                    &lt;/a&gt;
+                    &lt;a href="#" class="widget-remove-option"&gt;
+                        &lt;i class="fa fa-times"&gt;&lt;/i&gt;
+                    &lt;/a&gt;
+                &lt;/span&gt;
+            &lt;/div&gt;
+            &lt;div class="smart-widget-inner"&gt;
+                &lt;div class="smart-widget-hidden-section"&gt;
+                    &lt;ul class="widget-color-list clearfix"&gt;
+                        &lt;li style="background-color:#20232b;" data-color="widget-dark"&gt;&lt;/li&gt;
+                        &lt;li style="background-color:#4c5f70;" data-color="widget-dark-blue"&gt;&lt;/li&gt;
+                        &lt;li style="background-color:#23b7e5;" data-color="widget-blue"&gt;&lt;/li&gt;
+                        &lt;li style="background-color:#2baab1;" data-color="widget-green"&gt;&lt;/li&gt;
+                        &lt;li style="background-color:#edbc6c;" data-color="widget-yellow"&gt;&lt;/li&gt;
+                        &lt;li style="background-color:#fbc852;" data-color="widget-orange"&gt;&lt;/li&gt;
+                        &lt;li style="background-color:#e36159;" data-color="widget-red"&gt;&lt;/li&gt;
+                        &lt;li style="background-color:#7266ba;" data-color="widget-purple"&gt;&lt;/li&gt;
+                        &lt;li style="background-color:#f5f5f5;" data-color="widget-light-grey"&gt;&lt;/li&gt;
+                        &lt;li style="background-color:#fff;" data-color="reset"&gt;&lt;/li&gt;
+                    &lt;/ul&gt;
+                &lt;/div&gt;
+                &lt;div class="smart-widget-body no-padding bg-grey"&gt;
+                    &lt;p id="calendar" class="custom-calendar no-margin full-width"&gt;&lt;/p&gt;
+                &lt;/div&gt;
+                &lt;ul class="list-group no-border"&gt;
+                    &lt;li class="list-group-item"&gt;
+                        Meeting
+                        &lt;span class="badge badge-success"&gt;7:30&lt;/span&gt;
+                    &lt;/li&gt;
+                    &lt;li class="list-group-item"&gt;
+                        Database Migration
+                        &lt;span class="badge badge-danger"&gt;11:15&lt;/span&gt;
+                    &lt;/li&gt;
+                &lt;/ul&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+</pre>
+		
+		<div class="row">
+			<div class="col-md-4">
+				<div class="panel panel-default calendar-widget m-top-md">
+					<div class="padding-md bg-info clearfix">
+						<div class="date-big">17</div>
+						<div class="current-date">
+							<div class="text-upper">Thursday</div>
+							<small class="text-muted block">July/2014</small>
+						</div>
+					</div>
+					<div class="panel-body no-padding bg-white">
+						<p id="calendar2" class="custom-calendar calendar-demo" style="width:100%"></p>
+					</div>
+				</div><!-- ./panel -->
+			</div><!-- ./col -->
+		</div><!-- ./row -->
+
+<pre class="prettyprint linenums">
+&lt;div class="row"&gt;
+    &lt;div class="col-md-4"&gt;
+        &lt;div class="panel panel-default calendar-widget"&gt;
+            &lt;div class="padding-md bg-info clearfix"&gt;
+                &lt;div class="date-big"&gt;17&lt;/div&gt;
+                &lt;div class="current-date"&gt;
+                    &lt;div class="text-upper">Thursday&lt;/div&gt;
+                    &lt;small class="text-muted block"&gt;July/2014&lt;/small&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div class="panel-body no-padding bg-white"&gt;
+                &lt;p id="calendar" class="custom-calendar" style="width:100%">&lt;/p&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+</pre>
+
+		<h4 class="m-top-lg headline">
+			6.4 Others widget
+			<span class="line">
+		</h4>
+
+		<p>You can change this to do list to sortable list by adding class <code>.sortable-list</code>. Sortable list  is controlled by <code>jquery.sortable.js</code> </p>
+
+		<p><code>jquery.sortable.js</code> is located under the <code>js/uncompressed</code> directory.</p>
+
+		<div class="row m-top-md">
+			<div class="col-lg-4">
+				<div class="smart-widget">
+					<div class="smart-widget-header">
+						<span class="badge badge-danger pull-right">10</span>
+						To Do List
+					</div>
+					<div class="smart-widget-inner">
+						<div class="smart-widget-body clearfix">
+							<div class="search-input pull-left">
+								<input type="text" class="form-control input-sm">
+								<a href="#" class="input-icon text-normal"><i class="ion-ios7-search-strong"></i></a>
+							</div>
+							<a class="btn btn-success btn-sm pull-right"><i class="fa fa-plus"></i> Add Task</a>
+						</div>
+						<ul class="list-group to-do-list sortable-list no-border">
+							<li class="list-group-item" draggable="true">
+								<div class="custom-checkbox todo-checkbox">
+									<input type="checkbox" value="None" id="todo-check1">
+									<label for="todo-check1"></label>
+								</div>
+								SEO Optimisation
+								<div class="remove-list">
+									<i class="ion-close"></i>
+								</div>
+							</li>
+							<li class="list-group-item" draggable="true">
+								<div class="custom-checkbox todo-checkbox">
+									<input type="checkbox" id="todo-check2">
+									<label for="todo-check2"></label>
+								</div>
+								Unit Testing
+								<div class="remove-list">
+									<i class="ion-close"></i>
+								</div>
+							</li>
+							<li class="list-group-item" draggable="true">
+								<div class="custom-checkbox todo-checkbox">
+									<input type="checkbox" id="todo-check3">
+									<label for="todo-check3"></label>
+								</div>
+								Mobile Development
+								<div class="remove-list">
+									<i class="ion-close"></i>
+								</div>
+							</li>
+							<li class="list-group-item" draggable="true">
+								<div class="custom-checkbox todo-checkbox">
+									<input type="checkbox" id="todo-check4">
+									<label for="todo-check4"></label>
+								</div>
+								Database Migration
+								<div class="remove-list">
+									<i class="ion-close"></i>
+								</div>
+							</li>
+							<li class="list-group-item" draggable="true">
+								<div class="custom-checkbox todo-checkbox">
+									<input type="checkbox" id="todo-check5">
+									<label for="todo-check5"></label>
+								</div>
+								New Frontend Layout 
+								<div class="remove-list">
+									<i class="ion-close"></i>
+								</div>
+							</li>
+							<li class="list-group-item" draggable="true">
+								<div class="custom-checkbox todo-checkbox">
+									<input type="checkbox" id="todo-check6">
+									<label for="todo-check6"></label>
+								</div>
+								Bug Fixes 
+								<div class="remove-list">
+									<i class="ion-close"></i>
+								</div>
+							</li>
+						</ul>
+					</div><!-- ./smart-widget-inner -->
+				</div><!-- ./smart-widget -->
+			</div><!-- ./col -->
+		</div><!-- ./row -->
+
+<pre class="prettyprint linenums">
+&lt;div class="row"&gt;
+    &lt;div class="col-lg-4"&gt;
+        &lt;div class="smart-widget"&gt;
+            &lt;div class="smart-widget-header"&gt;
+                &lt;span class="badge badge-danger pull-right"&gt;10&lt;/span&gt;
+                To Do List
+            &lt;/div&gt;
+            &lt;div class="smart-widget-inner"&gt;
+                &lt;div class="smart-widget-body clearfix"&gt;
+                    &lt;div class="search-input pull-left"&gt;
+                        &lt;input type="text" class="form-control input-sm"&gt;
+                        &lt;a href="#" class="input-icon text-normal">&lt;i class="ion-ios7-search-strong">&lt;/i&gt;&lt;/a>
+                    &lt;/div>
+                    &lt;a class="btn btn-success btn-sm pull-right"&gt;&lt;i class="fa fa-plus"&gt;&lt;/i&gt; Add Task&lt;/a&gt;
+                &lt;/div&gt;
+                &lt;ul class="list-group to-do-list sortable-list no-border"&gt;
+                    &lt;li class="list-group-item" draggable="true"&gt;
+                        &lt;div class="custom-checkbox todo-checkbox"&gt;
+                            &lt;input type="checkbox" value="None" id="todo-check1"&gt;
+                            &lt;label for="todo-check1"&gt;&lt;/label&gt;
+                        &lt;/div&gt;
+                        SEO Optimisation
+                        &lt;div class="remove-list"&gt;
+                            &lt;i class="ion-close"&gt;&lt;/i&gt;
+                        &lt;/div&gt;
+                    &lt;/li&gt;
+                    &lt;li class="list-group-item" draggable="true"&gt;
+                        &lt;div class="custom-checkbox todo-checkbox"&gt;
+                            &lt;input type="checkbox" id="todo-check2"&gt;
+                            &lt;label for="todo-check2"&gt;&lt;/label&gt;
+                        &lt;/div&gt;
+                        Unit Testing
+                        &lt;div class="remove-list"&gt;
+                            &lt;i class="ion-close"&gt;&lt;/i&gt;
+                        &lt;/div&gt;
+                    &lt;/li&gt;
+                    .
+                    .
+                    .
+                &lt;/ul&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+</pre>
+
+		<div class="row m-top-md">
+			<div class="col-lg-4">
+				<div class="smart-widget">
+					<div class="smart-widget-header">
+						<i class="fa fa-comment"></i> Chat
+						<span class="smart-widget-option">
+							<span class="refresh-icon-animated">
+								<i class="fa fa-circle-o-notch fa-spin"></i>
+							</span>
+                            <a href="#" class="widget-toggle-hidden-option">
+                                <i class="fa fa-cog"></i>
+                            </a>
+                            <a href="#" class="widget-collapse-option" data-toggle="collapse">
+                                <i class="fa fa-chevron-up"></i>
+                            </a>
+                            <a href="#" class="widget-refresh-option">
+                                <i class="fa fa-refresh"></i>
+                            </a>
+                            <a href="#" class="widget-remove-option">
+                                <i class="fa fa-times"></i>
+                            </a>
+                        </span>
+					</div>
+					<div class="smart-widget-inner">
+						<div class="smart-widget-hidden-section">
+							<ul class="widget-color-list clearfix">
+								<li style="background-color:#20232b;" data-color="widget-dark"></li>
+								<li style="background-color:#4c5f70;" data-color="widget-dark-blue"></li>
+								<li style="background-color:#23b7e5;" data-color="widget-blue"></li>
+								<li style="background-color:#2baab1;" data-color="widget-green"></li>
+								<li style="background-color:#edbc6c;" data-color="widget-yellow"></li>
+								<li style="background-color:#fbc852;" data-color="widget-orange"></li>
+								<li style="background-color:#e36159;" data-color="widget-red"></li>
+								<li style="background-color:#7266ba;" data-color="widget-purple"></li>
+								<li style="background-color:#f5f5f5;" data-color="widget-light-grey"></li>
+								<li style="background-color:#fff;" data-color="reset"></li>
+							</ul>
+						</div>
+						<div class="smart-widget-body">
+							<div id="chatScroll">
+								<ul class="chat">
+									<li class="left clearfix">
+										<span class="chat-img pull-left">
+											<img src="assets/img/profile/profile1.jpg" alt="User Avatar">
+										</span>
+										<div class="chat-body clearfix">
+											<div class="header no-margin">
+												<strong class="primary-font">John Doe</strong>
+												<small class="pull-right text-muted"><i class="fa fa-clock-o"></i> 12 mins ago</small>
+											</div>
+											<p>
+												Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+											</p>
+										</div>
+									</li>
+									<li class="right clearfix">
+										<span class="chat-img pull-right">
+											<img src="assets/img/profile/profile2.jpg" alt="User Avatar">
+										</span>
+										<div class="chat-body clearfix">
+										<div class="header no-margin">
+											<strong class="primary-font">Jane Doe</strong>
+											<small class="pull-right text-muted"><i class="fa fa-clock-o"></i> 13 mins ago</small>
+										</div>
+											<p>
+												Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur bibendum ornare dolor, quis ullamcorper ligula sodales at. 
+											</p>
+										</div>
+									</li>
+								</ul>
+							</div>
+						</div>
+						<div class="smart-widget-footer">
+							<div class="input-group">
+								<input id="btn-input" type="text" class="form-control input-sm" placeholder="type your message here...">
+								<span class="input-group-btn">
+									<button class="btn btn-success btn-sm no-shadow" id="btn-chat">Send</button>
+								</span>
+							</div><!-- /input-group -->
+						</div><!-- ./smart-widget-footer -->
+					</div><!-- ./smart-widget-inner -->
+				</div><!-- ./smart-widget -->
+			</div><!-- ./col -->
+		</div><!-- ./row -->
+
+<pre class="prettyprint linenums">
+&lt;div class="row"&gt;
+    &lt;div class="col-lg-4"&gt;
+        &lt;div class="smart-widget"&gt;
+            &lt;div class="smart-widget-header"&gt;
+                &lt;i class="fa fa-comment">&lt;/i&gt; Chat
+                &lt;span class="smart-widget-option"&gt;
+                    &lt;span class="refresh-icon-animated"&gt;
+                        &lt;i class="fa fa-circle-o-notch fa-spin"&gt;&lt;/i&gt;
+                    &lt;/span&gt;
+                    &lt;a href="#" class="widget-toggle-hidden-option"&gt;
+                        &lt;i class="fa fa-cog"&gt;&lt;/i&gt;
+                    &lt;/a&gt;
+                    &lt;a href="#" class="widget-collapse-option" data-toggle="collapse"&gt;
+                        &lt;i class="fa fa-chevron-up"&gt;&lt;/i&gt;
+                    &lt;/a&gt;
+                    &lt;a href="#" class="widget-refresh-option"&gt;
+                        &lt;i class="fa fa-refresh"&gt;&lt;/i&gt;
+                    &lt;/a&gt;
+                    &lt;a href="#" class="widget-remove-option"&gt;
+                        &lt;i class="fa fa-times"&gt;&lt;/i&gt;
+                    &lt;/a&gt;
+                &lt;/span&gt;
+            &lt;/div&gt;
+            &lt;div class="smart-widget-inner"&gt;
+                &lt;iv class="smart-widget-body"&gt;
+                    &lt;div class="scrollable-content"&gt;
+                        &lt;ul class="chat"&gt;
+                            &lt;li class="left clearfix"&gt;
+                                &lt;span class="chat-img pull-left"&gt;
+                                    &lt;img src="assets/img/profile/profile1.jpg" alt="User Avatar"&gt;
+                                &lt;/span&gt;
+                                &lt;div class="chat-body clearfix"&gt;
+                                    &lt;div class="header"&gt;
+                                        &lt;strong class="primary-font"&gt;John Doe&lt;/strong&gt;
+                                        &lt;small class="pull-right text-muted"&gt;&lt;i class="fa fa-clock-o"&gt;&lt;/i&gt; 12 mins ago&lt;/small&gt;
+                                    &lt;/div&gt;
+                                    &lt;p&gt;
+                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                                    &lt;/p&gt;
+                                &lt;/div&gt;
+                            &lt;/li&gt;
+                            &lt;li class="right clearfix"&gt;
+                                &lt;span class="chat-img pull-right"&gt;
+                                    &lt;img src="assets/img/profile/profile2.jpg" alt="User Avatar"&gt;
+                                &lt;/span&gt;
+                                &lt;div class="chat-body clearfix"&gt;
+                                    &lt;div class="header"&gt;
+                                        &lt;strong class="primary-font"&gt;Jane Doe&lt;/strong&gt;
+                                        &lt;small class="pull-right text-muted">&lt;i class="fa fa-clock-o"&gt;&lt;/i&gt;13 mins ago&lt;/small&gt;
+                                    &lt;/div&gt;
+                                    &lt;p&gt;
+                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur bibendum ornare dolor, quis ullamcorper ligula sodales at. 
+                                    &lt;/p&gt;
+                                &lt;/div&gt;
+                            &lt;/li&gt;
+                        &lt;/ul&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+                &lt;div class="smart-widget-footer"&gt;
+                    &lt;div class="input-group"&gt;
+                        &lt;input id="btn-input" type="text" class="form-control input-sm" placeholder="type your message here..."&gt;
+                        &lt;span class="input-group-btn"&gt;
+                            &lt;button class="btn btn-success btn-sm no-shadow" id="btn-chat">Send&lt;/button&gt;
+                        &lt;/span&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+</pre>
+
+		<h3 class="headline">
+			7. Helper Class
+			<span class="line"></span>
+			<a class="to-top" href="#">Back to top <i class="fa fa-angle-double-up"></i></a>
+		</h3>
+		
+		<p>All helper classes are defined in <code>utility.less</code>.</p>
+		
+		<h4 class="headline">
+			7.1 Padding
+			<span class="line"></span>
+		</h4>
+		
+		<p>Set padding property to an element.</p>
+		
+<pre class="prettyprint linenums">
+&lt;div class="padding-xs"&gt;&lt;/div&gt; &lt;!-- Padding 5px --&gt;
+&lt;div class="padding-sm"&gt;&lt;/div&gt; &lt;!-- Padding 10px --&gt;
+&lt;div class="padding-md"&gt;&lt;/div&gt; &lt;!-- Padding 20px --&gt;
+&lt;div class="padding-lg"&gt;&lt;/div&gt; &lt;!-- Padding 40px --&gt;
+
+&lt;div class="paddingTB-xs"&gt;&lt;/div&gt; &lt;!-- Padding 5px (Top and Bottom)--&gt;
+&lt;div class="paddingTB-sm"&gt;&lt;/div&gt; &lt;!-- Padding 10px (Top and Bottom)--&gt;
+&lt;div class="paddingTB-md"&gt;&lt;/div&gt; &lt;!-- Padding 20px (Top and Bottom)--&gt;
+&lt;div class="paddingTB-lg"&gt;&lt;/div&gt; &lt;!-- Padding 40px (Top and Bottom)--&gt;
+
+&lt;div class="paddingTB-xs"&gt;&lt;/div&gt; &lt;!-- Padding 5px (Left and Right)--&gt;
+&lt;div class="paddingTB-sm"&gt;&lt;/div&gt; &lt;!-- Padding 10px (Left and Right)--&gt;
+&lt;div class="paddingTB-md"&gt;&lt;/div&gt; &lt;!-- Padding 20px (Left and Right)--&gt;
+&lt;div class="paddingTB-lg"&gt;&lt;/div&gt; &lt;!-- Padding 40px (Left and Right)--&gt;
+</pre>
+
+		<h4 class="headline">
+			7.2 Margin
+			<span class="line"></span>
+		</h4>
+		
+		<p>Set margin property to an element.</p>
+		
+<pre class="prettyprint linenums">
+&lt;div class="margin-xs"&gt;&lt;/div&gt; &lt;!-- Margin 5px --&gt;
+&lt;div class="margin-sm"&gt;&lt;/div&gt; &lt;!-- Margin 10px --&gt;
+&lt;div class="margin-md"&gt;&lt;/div&gt; &lt;!-- Margin 20px --&gt;
+&lt;div class="margin-lg"&gt;&lt;/div&gt; &lt;!-- Margin 40px --&gt;
+
+&lt;div class="m-top-xs"&gt;&lt;/div&gt; &lt;!-- Margin Top 5px --&gt;
+&lt;div class="m-top-sm"&gt;&lt;/div&gt; &lt;!-- Margin Top 10px --&gt;
+&lt;div class="m-top-md"&gt;&lt;/div&gt; &lt;!-- Margin Top 20px --&gt;
+&lt;div class="m-top-lg"&gt;&lt;/div&gt; &lt;!-- Margin Top 40px --&gt;
+
+&lt;div class="m-bottom-xs"&gt;&lt;/div&gt; &lt;!-- Margin Bottom 5px --&gt;
+&lt;div class="m-bottom-sm"&gt;&lt;/div&gt; &lt;!-- Margin Bottom 10px --&gt;
+&lt;div class="m-bottom-md"&gt;&lt;/div&gt; &lt;!-- Margin Bottom 20px --&gt;
+&lt;div class="m-bottom-lg"&gt;&lt;/div&gt; &lt;!-- Margin Bottom 40px --&gt;
+
+&lt;div class="m-left-xs"&gt;&lt;/div&gt; &lt;!-- Margin Left 5px --&gt;
+&lt;div class="m-left-sm"&gt;&lt;/div&gt; &lt;!-- Margin Left 10px --&gt;
+&lt;div class="m-left-md"&gt;&lt;/div&gt; &lt;!-- Margin Left 20px --&gt;
+&lt;div class="m-left-lg"&gt;&lt;/div&gt; &lt;!-- Margin Left 40px --&gt;
+
+&lt;div class="m-right-xs"&gt;&lt;/div&gt; &lt;!-- Margin Right 5px --&gt;
+&lt;div class="m-right-sm"&gt;&lt;/div&gt; &lt;!-- Margin Right 10px --&gt;
+&lt;div class="m-right-md"&gt;&lt;/div&gt; &lt;!-- Margin Right 20px --&gt;
+&lt;div class="m-right-lg"&gt;&lt;/div&gt; &lt;!-- Margin Right 40px --&gt;
+</pre>
+		
+		<h4 class="headline">
+			7.3 Emphasis classes
+			<span class="line"></span>
+		</h4>
+		<p>Convey meaning through color with a handful of emphasis utility classes.</p>
+		
+		<div class="well">
+			<p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+			<p class="text-info">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+			<p class="text-success">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+			<p class="text-primary">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+			<p class="text-warning">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+			<p class="text-danger">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+		</div>
+<pre class="prettyprint linenums">
+&lt;p class="text-muted"&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit.&lt;/p&gt;
+&lt;p class="text-info"&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit.&lt;/p&gt;
+&lt;p class="text-success"&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit.&lt;/p&gt;
+&lt;p class="text-primary"&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit.&lt;/p&gt;
+&lt;p class="text-warning"&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit.&lt;/p&gt;
+&lt;p class="text-danger"&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit.&lt;/p&gt;	
+</pre>
+
+		<h4 class="headline">
+			7.4 Background Color
+			<span class="line"></span>
+		</h4>	
+
+		<p>Use any of the available background classes to change background color.</p>
+		
+		<div class="bg-white padding-xs m-bottom-sm"></div>
+		<div class="bg-dark padding-xs m-bottom-sm"></div>
+		<div class="bg-info padding-xs m-bottom-sm"></div>
+		<div class="bg-primary padding-xs m-bottom-sm"></div>
+		<div class="bg-success padding-xs m-bottom-sm"></div>
+		<div class="bg-warning padding-xs m-bottom-sm"></div>
+		<div class="bg-danger padding-xs m-bottom-md"></div>
+		
+<pre class="prettyprint linenums">
+&lt;div class="bg-white"&gt;&lt;/div&gt;
+&lt;div class="bg-dark"&gt;&lt;/div&gt;
+&lt;div class="bg-info"&gt;&lt;/div&gt;
+&lt;div class="bg-primary"&gt;&lt;/div&gt;
+&lt;div class="bg-success"&gt;&lt;/div&gt;
+&lt;div class="bg-warning"&gt;&lt;/div&gt;
+&lt;div class="bg-danger"&gt;&lt;/div&gt;
+</pre>		
+
+		<h4 class="headline">
+			7.5 Animation
+			<span class="line"></span>
+		</h4>	
+		
+		<p>Use any of the available animation classes to quickly create a css3 animation.</p>
+		
+		<a class="btn btn-danger m-bottom-20" id="fadeInUpDemo">Start Animation</a>
+		
+<pre class="prettyprint linenums">
+&lt;div class="fadeInUp"&gt;&lt;/div&gt;
+</pre>
+
+		<a class="btn btn-danger m-bottom-20" id="fadeInDownDemo">Start Animation</a>
+		
+<pre class="prettyprint linenums">
+&lt;div class="fadeInDown"&gt;&lt;/div&gt;
+</pre>
+
+		<a class="btn btn-danger m-bottom-20" id="fadeInLeftDemo">Start Animation</a>
+		
+<pre class="prettyprint linenums">
+&lt;div class="fadeInLeft"&gt;&lt;/div&gt;
+</pre>
+		
+		<a class="btn btn-danger m-bottom-20" id="fadeInRightDemo">Start Animation</a>
+		
+<pre class="prettyprint linenums">
+&lt;div class="fadeInRight"&gt;&lt;/div&gt;
+</pre>
+
+		<a class="btn btn-danger m-bottom-20" id="bounceInDemo">Start Animation</a>
+		
+<pre class="prettyprint linenums">
+&lt;div class="bounceIn"&gt;&lt;/div&gt;
+</pre>
+
+		<a class="btn btn-danger m-bottom-20" id="flipInHDemo">Start Animation</a>
+		
+<pre class="prettyprint linenums">
+&lt;div class="flipInH"&gt;&lt;/div&gt;
+</pre>
+		
+		<a class="btn btn-danger m-bottom-20" id="flipInVDemo">Start Animation</a>
+		
+<pre class="prettyprint linenums">
+&lt;div class="flipInV"&gt;&lt;/div&gt;
+</pre>
+		
+		<h4 class="headline">
+			6.6 Animation Delay
+			<span class="line"></span>
+		</h4>	
+		
+		<p>Uses the following classes to specify a animation delay of the element <code>.animation-delay*</code></p>
+		
+		<a class="btn btn-danger m-bottom-20 animation-delay5" id="delayDemo">Start Animation</a>
+		
+<pre class="prettyprint linenums">
+&lt;div class="bounceIn animation-delay5"&gt;&lt;/div&gt;
+</pre>
+
+		<h2 class="headline" id="section5">
+			E. Change Log
+			<span class="line"></span>
+			<a class="to-top" href="#">Back to top <i class="fa fa-angle-double-up"></i></a>
+		</h2>
+		
+		<h5>
+			Version 1.0
+		</h5>
+<pre class="prettyprint linenums">
+    Initial Version.
+</pre>
+		
+		<h2 class="headline" id="section6">
+			F. Credits
+			<span class="line"></span>
+			<a class="to-top" href="#">Back to top <i class="fa fa-angle-double-up"></i></a>
+		</h2>
+		
+		<p>
+			Simplify Admin could not be what it is without using the following:
+		</p>
+		
+		<h4>Libraries & Plugins</h4>
+		<ul class="m-bottom-20">
+			<li><a href="http://getbootstrap.com/">Twiiter Bootstrap</a></li>
+			<li><a href="http://jquery.com/">jQuery</a></li>
+			<li><a href="http://jqueryui.com/">jQuery UI</a></li>
+			<li><a href="http://www.eyecon.ro/datepicker/">Datepicker</a></li>
+			<li><a href="http://www.dropzonejs.com/">Dropzone</a></li>
+			<li><a href="http://fullcalendar.io/">Full Calendar</a></li>
+			<li><a href="http://www.jacklmoore.com/colorbox/">Colorbox</a></li>
+			<li><a href="https://datatables.net/">Datatable</a></li>
+			<li><a href="http://rendro.github.io/easy-pie-chart/">Easy Pie Chart</a></li>
+			<li><a href="http://www.flotcharts.org/">Flot Chart</a></li>
+			<li><a href="http://boedesign.com/blog/2009/07/11/growl-for-jquery-gritter/">Gritter</a></li>
+			<li><a href="http://flesler.blogspot.com/2007/10/jquerylocalscroll-10.html">Local Scroll</a></li>
+			<li><a href="http://ned.im/noty/">Noty</a></li>
+			<li><a href="http://vast-engineering.github.io/jquery-popup-overlay/">jQuery Popup Overlay</a></li>
+			<li><a href="http://demos.flesler.com/jquery/scrollTo/">ScrollTo</a></li>
+			<li><a href="http://rocha.la/jQuery-slimScroll">Slimscroll</a></li>
+			<li><a href="http://www.jquery-steps.com/">Steps</a></li>
+			<li><a href="http://xoxco.com/projects/code/tagsinput/">Tag Input</a></li>
+			<li><a href="http://masonry.desandro.com/">Masonry</a></li>
+			<li><a href="http://modernizr.com/">Modernizr</a></li>
+			<li><a href="http://momentjs.com/">Moment</a></li>
+			<li><a href="http://morrisjs.github.io/morris.js/">Morris Chart</a></li>
+			<li><a href="http://www.owlcarousel.owlgraphic.com/">Owl Carousel</a></li>
+			<li><a href="http://parsleyjs.org/">Parsley</a></li>
+			<li><a href="http://raphaeljs.com/">Rapheal</a></li>
+			<li><a href="http://ivaynberg.github.io/select2/">Select2</a></li>
+			<li><a href="https://github.com/darkskyapp/skycons/">Skycons</a></li>
+			<li><a href="http://farhadi.ir/projects/html5sortable/">Sortable</a></li>
+			<li><a href="http://omnipotent.net/jquery.sparkline/">Sparkline</a></li>
+			<li><a href="http://imakewebthings.com/jquery-waypoints/">Waypoints</a></li>
+			<li><a href="https://code.google.com/p/google-code-prettify/">Google Code Prettify</a></li>	
+			<li><a href="http://fortawesome.github.io/Font-Awesome/">Font awesome</a>
+			<li><a href="http://ionicons.com/">Ionicons</a>
+			<li><a href="http://www.google.com/fonts">Google Web Fonts</a></li>
+			<li><a href="http://lesscss.org/">LESS</a></li>
+		</ul>
+		
+		<h4>Slider Revolution</h4>
+
+		<div class="alert alert-danger">This is an licensed plugin so you must use this plugin within Simplify Admin and you must not extract and use them on a stand-alone basis.</div>
+
+		Simlplify Admin use Slider Revolution for creating awesome slider on landing page. There is a zip file  located under the <code>HTML/landing</code>, this zip file contain documentation and example of this slider. You can see how to setup this slider from the Slider Revolution documentation or see this <a href="http://themepunch.com/revolution/" class="text-important">http://themepunch.com/revolution/</a> for more information about this slider. 
+		<h4 class="m-top-md">Flickr Photos</h4>
+		<p class="block" style="margin-bottom: 50px;">
+			All images viewed in the live preview are for demo purposes only and are not included with your purchase. All images are licensed under <a href="http://creativecommons.org/licenses/by/2.0/deed.en" class="text-important">Creative Commons - Attribution 2.0 Generic</a>
+		</p>
+	</div>
+
+	<!-- ./Modal -->
+	<!-- Delete Widget Confirmation -->
+	<div class="custom-popup delete-widget-popup delete-confirmation-popup" id="deleteWidgetConfirm">
+		<div class="popup-header text-center">
+			<span class="fa-stack fa-4x">
+			  <i class="fa fa-circle fa-stack-2x"></i>
+			  <i class="fa fa-lock fa-stack-1x fa-inverse"></i>
+			</span>
+		</div>
+		<div class="popup-body text-center">
+			<h5>Are you sure to delete this widget?</h5>
+			<strong class="block m-top-xs"><i class="fa fa-exclamation-circle m-right-xs text-danger"></i>This action cannot be undone</strong>
+		
+			<div class="text-center m-top-lg">
+				<a class="btn btn-success m-right-sm remove-widget-btn">Delete</a>
+				<a class="btn btn-default deleteWidgetConfirm_close">Cancel</a>
+			</div>
+		</div>
+	</div>
+	
+	<!-- Jquery -->
+	<script src="assets/js/jquery-1.10.2.min.js"></script>
+	
+	<!-- Bootstrap -->
+    <script src="bootstrap/js/bootstrap.min.js"></script>
+  
+	<!-- Google Code Prettify -->
+	<script src='assets/js/run_prettify.js'></script>
+	
+	<!-- jQuery Popup Overlay -->
+	<script src='assets/js/jquery.popupoverlay.min.js'></script>
+
+	<!-- Skycons -->
+	<script src='assets/js/skycons.js'></script>
+
+	<!-- Sortable -->
+	<script src='assets/js/jquery.sortable.js'></script>
+
+	<!-- Datepicker -->
+	<script src='assets/js/datepicker.js'></script>
+
+	<!-- Demo -->
+	<script src='assets/js/demo.js'></script>
+	
+	<script>
+		$(function()	{
+			$('#fadeInUpDemo').click(function()	{
+				var _activeElm = $(this);
+			
+				_activeElm.removeClass('fadeInUp');
+				
+				setTimeout(function() {
+					_activeElm.addClass('fadeInUp');
+				}, 200);
+				
+				return false;
+			});
+			
+			$('#fadeInDownDemo').click(function()	{
+				var _activeElm = $(this);
+			
+				_activeElm.removeClass('fadeInDown');
+				
+				setTimeout(function() {
+					_activeElm.addClass('fadeInDown');
+				}, 200);
+				
+				return false;
+			});
+			
+			$('#fadeInLeftDemo').click(function()	{
+				var _activeElm = $(this);
+			
+				_activeElm.removeClass('fadeInLeft');
+				
+				setTimeout(function() {
+					_activeElm.addClass('fadeInLeft');
+				}, 200);
+				
+				return false;
+			});
+			
+			$('#fadeInRightDemo').click(function()	{
+				var _activeElm = $(this);
+			
+				_activeElm.removeClass('fadeInRight');
+				
+				setTimeout(function() {
+					_activeElm.addClass('fadeInRight');
+				}, 200);
+				
+				return false;
+			});
+			
+			$('#bounceInDemo').click(function()	{
+				var _activeElm = $(this);
+			
+				_activeElm.removeClass('bounceIn');
+				
+				setTimeout(function() {
+					_activeElm.addClass('bounceIn');
+				}, 200);
+				
+				return false;
+			});
+			
+			$('#flipInHDemo').click(function()	{
+				var _activeElm = $(this);
+			
+				_activeElm.removeClass('flipInH');
+				
+				setTimeout(function() {
+					_activeElm.addClass('flipInH');
+				}, 200);
+				
+				return false;
+			});
+			
+			$('#flipInVDemo').click(function()	{
+				var _activeElm = $(this);
+			
+				_activeElm.removeClass('flipInV');
+				
+				setTimeout(function() {
+					_activeElm.addClass('flipInV');
+				}, 200);
+				
+				return false;
+			});
+			
+			$('#delayDemo').click(function()	{
+				var _activeElm = $(this);
+			
+				_activeElm.removeClass('bounceIn');
+				
+				setTimeout(function() {
+					_activeElm.addClass('bounceIn');
+				}, 200);
+				
+				return false;
+			});
+		});
+	</script>
+	
+  </body>
+</html>

@@ -1,0 +1,66 @@
+﻿@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<style media="screen" type="text/css">
+    /*This helps ng-show/ng-hide animations start at the right place*/
+    /*Angular sets this, but only after it has loaded (use this to start hidden)*/
+    .ng-hide {
+        display: none !important;
+    }
+</style>
+
+<div data-ng-include="'/Jt76Base/Layout/shell.html'"></div>
+
+@section scripts{
+
+    <script type="text/javascript">
+        
+        //handle layout
+        $(window).load(function () {
+            $("body").removeClass("overflow-hidden");
+
+            //Enable animation
+            $(".wrapper").removeClass("preload");
+        });
+
+        // Toggle Scroll to Top button
+        $(window).scroll(function () {
+
+            var position = $(window).scrollTop();
+
+            if (position >= 200) {
+                $(".scroll-to-top").addClass("active");
+            }
+            else {
+                $(".scroll-to-top").removeClass("active");
+            }
+        });
+
+        //add logging
+        var GlobalDebug = (function () {
+            var savedConsole = console;
+            return function (debugOn, suppressAll) {
+                var suppress = suppressAll || false;
+                if (debugOn === false) {
+                    console = {};
+                    console.log = function () { };
+                    if (suppress) {
+                        console.info = function () { };
+                        console.warn = function () { };
+                        console.error = function () { };
+                    } else {
+                        console.info = savedConsole.info;
+                        console.warn = savedConsole.warn;
+                        console.error = savedConsole.error;
+                    }
+                } else {
+                    console = savedConsole;
+                }
+            }
+        })();
+        GlobalDebug(true);
+
+
+    </script>
+}

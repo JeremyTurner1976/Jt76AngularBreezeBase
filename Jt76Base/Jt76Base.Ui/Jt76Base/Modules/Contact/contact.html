@@ -1,0 +1,39 @@
+﻿<div class="inbox-body p-top-xs" data-ng-controller="contact as vm">
+    <div class="sign-in-wrapper jt76-padding-sides-sm">
+        <div class="sign-in-inner">
+            <form name="Form" novalidate>
+
+                <div class="login-brand text-center no-m-bottom">
+                    <i class="fa fa-bug m-right-xs"></i> Contact <strong class="text-skin brand-name">Jt76</strong>
+                </div>
+
+                <div class="form-group m-bottom-md m-top-xs">
+                    <input name="strUserName" type="text" class="form-control"
+                           placeholder="Your Callsign" data-ng-model="vm.email.strUserName"
+                           required data-ng-minlength="5" data-ng-maxlength="100" />
+                    <span class="jt76-error" data-ng-show="Form.strUserName.$error.required">Required</span>
+                    <span class="jt76-error" data-ng-show="Form.strUserName.$error.minlength">Minimum 5 Characters</span>
+                    <span class="jt76-error" data-ng-show="Form.strUserName.$error.maxlength">Maximum 100 Characters</span>
+                </div>
+                <div class="form-group m-bottom-md">
+                    <input name="strUserEmail" type="email" class="form-control"
+                           placeholder="Email Address" data-ng-model="vm.email.strUserEmail" />
+                    <span class="jt76-error" data-ng-show="Form.strUserEmail.$error.email">Not a valid email</span>
+                </div>
+                <div class="form-group m-bottom-md">
+                    <textarea rows="12" name="strMessage" class="form-control"
+                              placeholder="Send me a message" data-ng-model="vm.email.strMessage"
+                              required data-ng-minlength="15" data-ng-maxlength="1500"></textarea>
+                    <span class="jt76-error" data-ng-show="Form.strMessage.$error.required">Required</span>
+                    <span class="jt76-error" data-ng-show="Form.strMessage.$error.minlength">Minimum 15 Characters</span>
+                    <span class="jt76-error" data-ng-show="Form.strMessage.$error.maxlength">Maximum 1500 Characters</span>
+                </div>
+
+                <div class="m-top-md p-top-sm m-bottom-md">
+                    <a class="btn btn-success block" data-ng-click="vm.sendEmail()" data-ng-disabled="Form.$invalid">Send</a>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+

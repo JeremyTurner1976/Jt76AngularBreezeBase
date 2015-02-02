@@ -1,0 +1,42 @@
+﻿@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<!--Modal-->
+<div class="modal fade lock-screen-wrapper" id="lockScreen">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-body">
+                <div class="lock-screen-img">
+                    <i class="fa fa-bug fa-lg"></i>
+                </div>
+
+                <div class="text-center m-top-sm">
+                    <div class="h4 text-white">John Doe</div>
+
+                    <div class="input-group m-top-sm">
+                        <input type="password" class="form-control text-sm" placeholder="Enter your password">
+                        <span class="input-group-btn">
+                            <a class="btn btn-success" href="/Home/Index">
+                                <i class="fa fa-arrow-right"></i>
+                            </a>
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+
+@section scripts
+{
+    <script>
+        $(function () {
+            $('#lockScreen').modal({
+                show: true,
+                backdrop: 'static'
+            });
+        });
+    </script>
+}
+

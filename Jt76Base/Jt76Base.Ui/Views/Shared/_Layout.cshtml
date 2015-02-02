@@ -1,0 +1,41 @@
+﻿<!DOCTYPE html>
+<html lang="en" data-ng-app="app">
+<head>
+    <meta charset="utf-8">
+    <title data-ng-bind="title">Jt76Base</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Angular Base Application">
+    <meta name="author" content="Jeremy Turner">
+
+    @*Mobile Boilerplate*@
+    <meta http-equiv="cleartype" content="on">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="MobileOptimized" content="320">
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="~/Content/Images/Touch/apple-touch-icon-144x144-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="~/Content/Images/Touch/apple-touch-icon-114x114-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="~/Content/Images/Touch/apple-touch-icon-72x72-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" href="~/Content/Images/Touch/apple-touch-icon-57x57-precomposed.png">
+    <link rel="shortcut icon" sizes="196x196" href="~/Content/Images/Touch/touch-icon-196x196.png">
+    <link rel="shortcut icon" href="~/Content/Images/Touch/apple-touch-icon.png">
+    <meta name="msapplication-TileImage" content="~/Content/Images/Touch/apple-touch-icon-144x144-precomposed.png">
+    <meta name="msapplication-TileColor" content="#222222">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="">
+
+    @Styles.Render("~/Content/css")
+
+</head>
+<body class="overflow-hidden">
+
+    @RenderBody()
+
+    @Scripts.Render("~/bundles/wrapBootstrap")
+    @Scripts.Render("~/bundles/angular")
+    @Scripts.Render("~/bundles/thirdParty")
+    @Scripts.Render("~/bundles/jt76Base")
+    @RenderSection("scripts", false)
+</body>
+</html>
+

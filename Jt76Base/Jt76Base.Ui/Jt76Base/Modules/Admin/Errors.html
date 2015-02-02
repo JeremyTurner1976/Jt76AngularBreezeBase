@@ -1,0 +1,116 @@
+﻿<div class="inbox-body jt76-padding-sides-xlg p-top-xs jt76-content-placeholder" data-ng-controller="errors as vm">
+    <div class="row m-bottom-md">
+        <div class="col-sm-3 m-bottom-sm">
+            <h2 class="no-margin">
+                Errors
+            </h2>
+        </div>
+
+        <div class="col-sm-3">
+            <div class="search-input">
+                <input type="text" class="form-control input-sm inline-block"
+                       data-ng-model="vm.errorsSearch"
+                       data-ng-keyup="vm.errorsSearchFunction($event)">
+                <a href="#" class="input-icon text-normal"><i class="ion-ios7-search-strong"></i></a>
+            </div>
+        </div>
+
+        <div class="col-sm-6 text-right text-left-sm">
+            <div class="btn-group">
+                <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+                    Order By <span class="caret"></span>
+                </button>
+                <ul class="dropdown-menu" role="menu">
+                    <li data-ng-repeat="item in vm.order"><a data-ng-click="vm.orderBy(item)">{{item}}</a></li>
+                    <li class="divider"></li>
+                    <li><a data-ng-click="vm.orderBy('')">Reset</a></li>
+                </ul>
+            </div>
+            <a class="btn btn-primary" data-ng-click="vm.simError()">
+                <i class="fa fa-fire"></i>&nbsp;Inject New Error
+            </a>
+            <a class="btn btn-success" data-ng-click="vm.addError()">
+                <i class="fa fa-plus-circle"></i>&nbsp;Add Error
+            </a>
+            <a class="btn btn-info" data-ng-click="vm.refreshErrors()">
+                <i class="fa fa-refresh"></i>&nbsp;Refresh
+            </a>
+        </div>
+    </div>
+
+    <div class="pagination-row clearfix m-bottom-md">
+        <div class="pull-left vertical-middle hidden-xs">{{vm.nFilteredErrorsCount}} / {{vm.nErrorsCount}} errors</div>
+        <div class="pull-right pull-left-sm">
+            <div class="inline-block vertical-middle m-right-xs" data-ng-show="vm.errorsPaging.bShow">Page {{vm.errorsPaging.nCurrentPage}} of {{vm.errorsPaging.nPageCount}}</div>
+            <div class="inline-block vertical-middle m-right-xs" data-ng-show="!vm.errorsPaging.bShow">Search Mode</div>
+            <pagination class="pagination vertical-middle" data-ng-show="vm.errorsPaging.bShow"
+                        boundary-links="true"
+                        on-select-page="vm.errorsPageChanged(page)"
+                        total-items="vm.nErrorsCount"
+                        items-per-page="vm.errorsPaging.nPageSize"
+                        page="vm.errorsPaging.nCurrentPage"
+                        max-size="vm.errorsPaging.nMaxPagesToShow"
+                        class="pagination-sm"
+                        previous-text="Prev"
+                        next-text="Next"
+                        first-text="First"
+                        last-text="Last">
+            </pagination>
+        </div>
+    </div>
+
+    <div class="message-table table-responsive">
+        <table class="table table-bordereds">
+            <thead>
+                <tr>
+                    <th>Created</th>
+                    <th>Message</th>
+                    <th>Source and Level</th>
+                    <th>Additional Information</th>
+                    <!--<th>StackTrace</th>-->
+                </tr>
+            </thead>
+            <tbody>
+                <tr data-ng-repeat="item in vm.filteredErrors">
+                    <td>
+                        <div>{{item.dtShortLocalCreated}}</div>
+                    </td>
+                    <td>
+                        <div><a class="jt76-title-link" data-ng-click="vm.gotoError(item)">{{item.strMessage}}</a></div>
+                    </td>
+                    <td>
+                        <div>{{item.strSource}} {{item.strErrorLevel}}</div>
+                    </td>
+                    <td>
+                        <div>{{item.strAdditionalInformation}}</div>
+                    </td>
+                    <!--<td>
+                        <div>{{item.strStackTrace}}</div>
+                    </td>-->
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="pagination-row clearfix m-bottom-md">
+        <div class="pull-left vertical-middle hidden-xs">{{vm.nFilteredErrorsCount}} / {{vm.nErrorsCount}} errors</div>
+        <div class="pull-right pull-left-sm">
+            <div class="inline-block vertical-middle m-right-xs" data-ng-show="vm.errorsPaging.bShow">Page {{vm.errorsPaging.nCurrentPage}} of {{vm.errorsPaging.nPageCount}}</div>
+            <div class="inline-block vertical-middle m-right-xs" data-ng-show="!vm.errorsPaging.bShow">Search Mode</div>
+            <pagination class="pagination vertical-middle" data-ng-show="vm.errorsPaging.bShow"
+                        boundary-links="true"
+                        on-select-page="vm.errorsPageChanged(page)"
+                        total-items="vm.nErrorsCount"
+                        items-per-page="vm.errorsPaging.nPageSize"
+                        page="vm.errorsPaging.nCurrentPage"
+                        max-size="vm.errorsPaging.nMaxPagesToShow"
+                        class="pagination-sm"
+                        previous-text="Prev"
+                        next-text="Next"
+                        first-text="First"
+                        last-text="Last">
+            </pagination>
+        </div>
+    </div>
+
+</div>

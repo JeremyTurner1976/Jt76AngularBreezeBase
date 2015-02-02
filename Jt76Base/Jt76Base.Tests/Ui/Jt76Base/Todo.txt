@@ -1,0 +1,2 @@
+﻿Saving client side unit tests until the Ember Base version is complete
+QUnit seems to be a better test suite than Jasmine/Chutzpah link into that instead

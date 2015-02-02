@@ -1,0 +1,142 @@
+﻿<div class="inbox-body jt76-padding-sides-xlg p-top-xs jt76-content-placeholder" data-ng-controller="adminDashboard as vm">
+    <div class="row m-top-md">
+        <div class="col-lg-3 col-sm-6">
+            <div class="statistic-box bg-danger m-bottom-md">
+                <div class="statistic-title">
+                    Today Visitors
+                </div>
+                <div class="statistic-value">
+                    96.7k
+                </div>
+                <div class="m-top-md">11% Higher than last week</div>
+                <div class="statistic-icon-background">
+                    <i class="ion-eye"></i>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-3 col-sm-6">
+            <div class="statistic-box bg-info m-bottom-md">
+                <div class="statistic-title">
+                    Today Sales
+                </div>
+                <div class="statistic-value">
+                    751
+                </div>
+                <div class="m-top-md">8% Higher than last week</div>
+                <div class="statistic-icon-background">
+                    <i class="ion-ios7-cart-outline"></i>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-3 col-sm-6">
+            <div class="statistic-box bg-purple m-bottom-md">
+                <div class="statistic-title">
+                    Today Users
+                </div>
+                <div class="statistic-value">
+                    129
+                </div>
+                <div class="m-top-md">3% Higher than last week</div>
+                <div class="statistic-icon-background">
+                    <i class="ion-person-add"></i>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-3 col-sm-6">
+            <div class="statistic-box bg-success m-bottom-md">
+                <div class="statistic-title">
+                    Today Earnings
+                </div>
+                <div class="statistic-value">
+                    $124.45k
+                </div>
+                <div class="m-top-md">7% Higher than last week</div>
+                <div class="statistic-icon-background">
+                    <i class="ion-stats-bars"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="row">
+        <div class="col-lg-6">
+            <div class="smart-widget widget-dark-blue">
+                <div class="smart-widget-header">
+                    TOTAL VISITS
+                    <span class="smart-widget-option">
+                        <a data-ng-click="vm.refreshBarGraph()" class="jt76-clickable-element">
+                            <i class="fa fa-refresh"></i>
+                        </a>
+                    </span>
+                </div>
+                <div class="smart-widget-inner">
+                    <div class="smart-widget-body no-padding">
+                        <div class="padding-md font-semi-bold">
+                            <div class="morris-chart" id="totalSalesChart" style="height: 250px; position: relative; padding-top: 2em;">
+                            </div>
+                        </div>
+
+                        <div class="bg-grey font-semi-bold">
+                            <div class="row" style="height: 75px; padding-top: .8em;">
+                                <div class="col-xs-6">
+
+                                </div>
+                                <div class="col-xs-6">
+                                    <div class="morris-hover morris-default-style">
+                                        <div class="morris-hover-row-label">2014</div>
+                                        <div class="morris-hover-point" style="color: rgb(153, 153, 153);">
+                                            Total Visits:
+                                            100
+                                        </div>
+                                        <div class="morris-hover-point" style="color: rgb(238, 238, 238);">
+                                            Bounce Rate:
+                                            90
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-lg-6">
+            <div class="smart-widget widget-dark-blue">
+                <div class="smart-widget-header">
+                    TOTAL SALES
+                    <span class="smart-widget-option">
+                        <a data-ng-click="vm.refreshPlotGraph()" class="jt76-clickable-element">
+                            <i class="fa fa-refresh"></i>
+                        </a>
+                    </span>
+                </div>
+                <div class="smart-widget-inner">
+                    <div class="smart-widget-body no-padding">
+                        <div class="padding-md font-semi-bold">
+                            <div id="placeholder" style="padding: 0; height: 250px; position: relative;"><canvas width="664" height="375" class="flot-base" style="left: 0; top: 0; width: 443px; height: 250px; position: absolute; direction: ltr;"></canvas><div class="flot-text" style="left: 0; top: 0; right: 0; bottom: 0; color: rgb(84, 84, 84); font-size: smaller; position: absolute;"><div class="flot-x-axis flot-x1-axis xAxis x1Axis" style="left: 0; top: 0; right: 0; bottom: 0; display: block; position: absolute;"><div class="flot-tick-label tickLabel" style="left: 28px; top: 234px; text-align: center; position: absolute; max-width: 73px;">0</div><div class="flot-tick-label tickLabel" style="left: 109px; top: 234px; text-align: center; position: absolute; max-width: 73px;">2</div><div class="flot-tick-label tickLabel" style="left: 190px; top: 234px; text-align: center; position: absolute; max-width: 73px;">4</div><div class="flot-tick-label tickLabel" style="left: 270px; top: 234px; text-align: center; position: absolute; max-width: 73px;">6</div><div class="flot-tick-label tickLabel" style="left: 351px; top: 234px; text-align: center; position: absolute; max-width: 73px;">8</div><div class="flot-tick-label tickLabel" style="left: 430px; top: 234px; text-align: center; position: absolute; max-width: 73px;">10</div></div><div class="flot-y-axis flot-y1-axis yAxis y1Axis" style="left: 0; top: 0; right: 0; bottom: 0; display: block; position: absolute;"><div class="flot-tick-label tickLabel" style="left: 20px; top: 222px; text-align: right; position: absolute;">0</div><div class="flot-tick-label tickLabel" style="left: 8px; top: 167px; text-align: right; position: absolute;">500</div><div class="flot-tick-label tickLabel" style="left: 3px; top: 112px; text-align: right; position: absolute;">1000</div><div class="flot-tick-label tickLabel" style="left: 4px; top: 56px; text-align: right; position: absolute;">1500</div><div class="flot-tick-label tickLabel" style="left: 2px; top: 1px; text-align: right; position: absolute;">2000</div></div></div><canvas width="664" height="375" class="flot-overlay" style="left: 0; top: 0; width: 443px; height: 250px; position: absolute; direction: ltr;"></canvas></div>
+                        </div>
+                        <div class="bg-grey">
+                            <div class="row" style="height: 75px">
+                                <div class="col-xs-4 text-center">
+                                    <h3 class="m-top-sm">3491</h3>
+                                    <small class="m-bottom-sm block">Total Sales</small>
+                                </div>
+                                <div class="col-xs-4 text-center">
+                                    <h3 class="m-top-sm">721</h3>
+                                    <small class="m-bottom-sm block">New Orders</small>
+                                </div>
+                                <div class="col-xs-4 text-center">
+                                    <h3 class="m-top-sm">$8103</h3>
+                                    <small class="m-bottom-sm block">Total Earnings</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>

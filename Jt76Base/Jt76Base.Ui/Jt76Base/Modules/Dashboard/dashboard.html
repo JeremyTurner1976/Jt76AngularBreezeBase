@@ -1,0 +1,50 @@
+﻿<div class="inbox-body jt76-padding-sides-xlg p-top-xs" data-ng-controller="dashboard as vm">
+    <div class="row jt76-padding-sides-md">
+        <div class="statistic-box bg-grey padding-sm">
+            <div class="statistic-box bg-info jt76-clickable-element m-left-lg m-right-lg" data-ng-click="vm.refreshWeather()">
+                <div class="col-md-6">
+                    <div class="statistic-title">
+                        Current Temperature
+                    </div>
+                    <div class="statistic-value">
+                        {{vm.currentWeather.temperature}}°
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="statistic-title">
+                        This Week
+                    </div>
+                    {{vm.strSummary}}
+                </div>
+                <div class="statistic-icon-background">
+                    <i class="ion-ios7-cloud"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <br />
+
+    <div class="row jt76-content-placeholder">
+        <div class="col-md-3" data-ng-repeat="item in vm.dailyWeather">
+            <div class="panel panel-default weather-widget">
+                <div data-ng-class="item.background">
+                    <div class="h4 text-white text-center" style="height: 30px">{{item.dtLocalDay}}'s Weather</div>
+                    <div class="m-top-md m-bottom-md text-center">
+                        <canvas data-jt76-skycon="{{item.icon}}" width="120" height="120"></canvas>
+                    </div>
+                    <div class="degree-text text-center">Max: {{item.temperatureMax}}° at {{item.dtLocalMax}}</div>
+                    <div class="degree-text text-center">Min: {{item.temperatureMin}}° at {{item.dtLocalMin}}</div>
+                </div>
+                <div class="panel-footer bg-white text-center padding-md">
+                    <div class="h4 text-upper">
+                        Cheney <i class="fa fa-map-marker"></i>
+                    </div>
+                    <div class="text-muted font-12 m-top-xs" style="height: 40px">{{item.summary}}</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+

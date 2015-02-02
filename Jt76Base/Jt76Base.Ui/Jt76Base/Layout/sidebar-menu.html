@@ -1,0 +1,120 @@
+﻿<aside class="sidebar-menu" data-ng-controller="sidebar-menu as vm">
+    <div class="sidebar-inner">
+
+        <div class="main-menu">
+            <ul class="accordion sidebar-accordion">
+                <li class="bg-palette-bluegreen active">
+                    <a href="#/dashboard">
+                        <span class="menu-content block">
+                            <span class="menu-icon"><i class="block fa fa-cloud fa-lg"></i></span>
+                            <span class="text m-left-sm">Dashboard</span>
+                        </span>
+                        <span class="menu-content-hover block">
+                            Dash
+                        </span>
+                    </a>
+                </li>
+
+                <li class="openable bg-palette-light-green">
+                    <a>
+                        <span class="menu-content block">
+                            <span class="menu-icon"><i class="block fa fa-picture-o fa-lg"></i></span>
+                            <span class="text m-left-sm">Projects</span>
+                            <span class="submenu-icon"></span>
+                        </span>
+                        <span class="menu-content-hover block">
+                            Projects
+                        </span>
+                    </a>
+                    <ul class="submenu bg-palette-light-green">
+                        <li><a href="#/projects"><span class="submenu-label">Project One</span></a></li>
+                        <li><a href="#/projects"><span class="submenu-label">Project Two</span></a></li>
+                    </ul>
+                </li>
+
+                <li class="bg-palette-dark-blue">
+                    <a href="#/about">
+                        <span class="menu-content block">
+                            <span class="menu-icon"><i class="block fa fa-star fa-lg"></i></span>
+                            <span class="text m-left-sm">About</span>
+                        </span>
+                        <span class="menu-content-hover block">
+                            About
+                        </span>
+                    </a>
+                </li>
+
+                <li class="bg-palette-light-blue">
+                    <a href="#/contact">
+                        <span class="menu-content block">
+                            <span class="menu-icon"><i class="block fa fa-envelope fa-lg"></i></span>
+                            <span class="text m-left-sm">Contact</span>
+                        </span>
+                        <span class="menu-content-hover block">
+                            Contact
+                        </span>
+                    </a>
+                </li>
+
+
+                <li class="openable bg-palette-red">
+                    <a>
+                        <span class="menu-content block">
+                            <span class="menu-icon"><i class="block fa fa-bolt fa-lg"></i></span>
+                            <span class="text m-left-sm">Admin</span>
+                            <span class="submenu-icon"></span>
+                        </span>
+                        <span class="menu-content-hover block">
+                            Admin
+                        </span>
+                    </a>
+                    <ul class="submenu bg-palette4">
+                        <li>
+                            <a href="#/admin/dashboard">
+                                Dashboard
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#/admin/errors">
+                                <span class="badge badge-warning m-right-xs">{{vm.errorsCount}}</span>
+                                Errors
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#/admin/logMessages">
+                                <span class="badge badge-info m-right-xs">{{vm.logMessagesCount}}</span>
+                                Log Messages
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#/admin/userAdmin">
+                                <span class="badge badge-success m-right-xs">{{vm.usersCount}}</span>
+                                User Admin
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+        <div class="sidebar-fix-bottom clearfix">
+            <div class="user-dropdown dropup pull-left">
+                <a href="#" class="dropdown-toggle font-18" data-toggle="dropdown">
+                    <i class="ion-person"></i>
+                </a>
+                <ul class="dropdown-menu">
+                    <li>
+                        <a>
+                            <i class="fa fa-edit fa-lg"></i><span class="m-left-xs">My Profile</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a>
+                            <i class="fa fa-power-off fa-lg"></i><span class="m-left-xs">Sign out</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <a href="/Home/Lockscreen" class="pull-right font-18"><i class="ion-log-out"></i></a>
+        </div>
+    </div>
+</aside>

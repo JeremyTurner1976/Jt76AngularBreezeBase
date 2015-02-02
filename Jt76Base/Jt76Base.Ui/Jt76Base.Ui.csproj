@@ -1,0 +1,456 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{58A134AA-B150-47C7-850C-30D4920CFBC6}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Jt76Base.Ui</RootNamespace>
+    <AssemblyName>Jt76Base.Ui</AssemblyName>
+    <TargetFrameworkVersion>v4.5.1</TargetFrameworkVersion>
+    <MvcBuildViews>false</MvcBuildViews>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">..\</SolutionDir>
+    <RestorePackages>true</RestorePackages>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Breeze.ContextProvider, Version=1.5.0.0, Culture=neutral, PublicKeyToken=f6085f1a45e2ac59, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Breeze.Server.ContextProvider.1.5.3\lib\Breeze.ContextProvider.dll</HintPath>
+    </Reference>
+    <Reference Include="Breeze.ContextProvider.EF6, Version=1.5.0.0, Culture=neutral, PublicKeyToken=f6085f1a45e2ac59, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Breeze.Server.ContextProvider.EF6.1.5.3\lib\Breeze.ContextProvider.EF6.dll</HintPath>
+    </Reference>
+    <Reference Include="Breeze.WebApi2">
+      <HintPath>..\packages\Breeze.Server.WebApi2.1.5.3\lib\Breeze.WebApi2.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\EntityFramework.6.1.1\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\EntityFramework.6.1.1\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="Forecast.io.45">
+      <HintPath>..\packages\Forecast.io.1.0.8\lib\net45\Forecast.io.45.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.Data.Edm, Version=5.6.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.Data.Edm.5.6.0\lib\net40\Microsoft.Data.Edm.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Data.OData, Version=5.6.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.Data.OData.5.6.0\lib\net40\Microsoft.Data.OData.dll</HintPath>
+    </Reference>
+    <Reference Include="Ninject, Version=3.2.0.0, Culture=neutral, PublicKeyToken=c7192dc5380945e7, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Ninject.3.2.2.0\lib\net45-full\Ninject.dll</HintPath>
+    </Reference>
+    <Reference Include="Ninject.Web.Common">
+      <HintPath>..\packages\Ninject.Web.Common.3.2.0.0\lib\net45-full\Ninject.Web.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Spatial, Version=5.6.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\System.Spatial.5.6.0\lib\net40\System.Spatial.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Http.OData">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.OData.5.2.2\lib\net45\System.Web.Http.OData.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Abstractions" />
+    <Reference Include="System.Web.Routing" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\packages\Newtonsoft.Json.6.0.4\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http">
+    </Reference>
+    <Reference Include="System.Net.Http.Formatting, Version=__MvcPagesVersion__, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Client.5.2.2\lib\net45\System.Net.Http.Formatting.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http.WebRequest">
+    </Reference>
+    <Reference Include="System.Web.Helpers, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.2\lib\net45\System.Web.Helpers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Http, Version=__MvcPagesVersion__, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Core.5.2.2\lib\net45\System.Web.Http.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Http.WebHost, Version=__MvcPagesVersion__, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.WebHost.5.2.2\lib\net45\System.Web.Http.WebHost.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Mvc, Version=__MvcPagesVersion__, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Mvc.5.2.2\lib\net45\System.Web.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Optimization">
+      <HintPath>..\packages\Microsoft.AspNet.Web.Optimization.1.1.3\lib\net40\System.Web.Optimization.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Razor.3.2.2\lib\net45\System.Web.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.2\lib\net45\System.Web.WebPages.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Deployment, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.2\lib\net45\System.Web.WebPages.Deployment.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.2\lib\net45\System.Web.WebPages.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="WebActivator">
+      <HintPath>..\packages\WebActivator.1.5.3\lib\net40\WebActivator.dll</HintPath>
+    </Reference>
+    <Reference Include="WebActivatorEx">
+      <HintPath>..\packages\WebActivatorEx.2.0\lib\net40\WebActivatorEx.dll</HintPath>
+    </Reference>
+    <Reference Include="WebApiContrib.IoC.Ninject">
+      <HintPath>..\packages\WebApiContrib.IoC.Ninject.0.9.3.0\lib\net40\WebApiContrib.IoC.Ninject.dll</HintPath>
+    </Reference>
+    <Reference Include="WebGrease">
+      <Private>True</Private>
+      <HintPath>..\packages\WebGrease.1.5.2\lib\WebGrease.dll</HintPath>
+    </Reference>
+    <Reference Include="Antlr3.Runtime">
+      <Private>True</Private>
+      <HintPath>..\packages\Antlr.3.4.1.9004\lib\Antlr3.Runtime.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+    <Folder Include="Jt76Base\Modules\Modals\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App_Start\BreezeWebApiConfig.cs" />
+    <Compile Include="App_Start\BundleConfig.cs" />
+    <Compile Include="App_Start\FilterConfig.cs" />
+    <Compile Include="App_Start\NinjectWebCommon.cs" />
+    <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="App_Start\WebApiConfig.cs" />
+    <Compile Include="Controllers\BreezeController.cs" />
+    <Compile Include="Controllers\ErrorsController.cs" />
+    <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UIService.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Content\Fonts\fontawesome-webfont.svg" />
+    <Content Include="Content\Fonts\ionicons.svg" />
+    <Content Include="Content\Images\back_disabled.png" />
+    <Content Include="Content\Images\back_enabled.png" />
+    <Content Include="Content\Images\back_enabled_hover.png" />
+    <Content Include="Content\Images\favicon.ico" />
+    <Content Include="Content\Images\forward_disabled.png" />
+    <Content Include="Content\Images\forward_enabled.png" />
+    <Content Include="Content\Images\forward_enabled_hover.png" />
+    <Content Include="Content\Images\Jt76Base\developer.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Images\sort_asc.png" />
+    <Content Include="Content\Images\sort_asc_disabled.png" />
+    <Content Include="Content\Images\sort_both.png" />
+    <Content Include="Content\Images\sort_desc.png" />
+    <Content Include="Content\Images\sort_desc_disabled.png" />
+    <Content Include="Content\Images\Touch\apple-touch-icon-114x114-precomposed.png" />
+    <Content Include="Content\Images\Touch\apple-touch-icon-144x144-precomposed.png" />
+    <Content Include="Content\Images\Touch\apple-touch-icon-57x57-precomposed.png" />
+    <Content Include="Content\Images\Touch\apple-touch-icon-72x72-precomposed.png" />
+    <Content Include="Content\Images\Touch\apple-touch-icon-precomposed.png" />
+    <Content Include="Content\Images\Touch\apple-touch-icon.png" />
+    <Content Include="Content\Images\Touch\touch-icon-128x128.png" />
+    <Content Include="Content\Images\Touch\touch-icon-196x196.png" />
+    <Content Include="Content\Images\Touch\touch-icon-60x60.png" />
+    <Content Include="Content\site.css">
+      <DependentUpon>site.less</DependentUpon>
+    </Content>
+    <Content Include="Content\site.min.css">
+      <DependentUpon>site.css</DependentUpon>
+    </Content>
+    <Content Include="Content\toastr.css">
+      <DependentUpon>toastr.less</DependentUpon>
+    </Content>
+    <Content Include="Content\toastr.min.css">
+      <DependentUpon>toastr.css</DependentUpon>
+    </Content>
+    <Content Include="Content\Vendor\angular-loading-bar.css" />
+    <Content Include="Content\Vendor\animate.css" />
+    <Content Include="Content\Vendor\bootstrap-slider.css" />
+    <Content Include="Content\Vendor\breeze.directives.css" />
+    <Content Include="Content\Vendor\colorbox\colorbox.css" />
+    <Content Include="Content\Vendor\colorbox\images\controls.png" />
+    <Content Include="Content\Vendor\colorbox\images\loading.gif" />
+    <Content Include="Content\Vendor\dataTables.bootstrap.css" />
+    <Content Include="Content\Vendor\datepicker.css" />
+    <Content Include="Content\Vendor\datetimepicker.css" />
+    <Content Include="Content\Vendor\dropzone\css\dropzone.css" />
+    <Content Include="Content\Vendor\dropzone\images\spritemap%402x.png" />
+    <Content Include="Content\Vendor\dropzone\images\spritemap.png" />
+    <Content Include="Content\Vendor\font-awesome.css" />
+    <Content Include="Content\Vendor\fullcalendar.css" />
+    <Content Include="Content\Vendor\fullcalendar.print.css" />
+    <Content Include="Content\Vendor\gritter\images\gritter-light.png" />
+    <Content Include="Content\Vendor\gritter\images\gritter-long.png" />
+    <Content Include="Content\Vendor\gritter\images\gritter.png" />
+    <Content Include="Content\Vendor\gritter\images\ie-spacer.gif" />
+    <Content Include="Content\Vendor\gritter\jquery.gritter.css" />
+    <Content Include="Content\Vendor\ionicons.css" />
+    <Content Include="Content\Vendor\jquery.dataTables.css" />
+    <Content Include="Content\Vendor\jquery.steps.css" />
+    <Content Include="Content\Vendor\jquery.tagsinput.css" />
+    <Content Include="Content\Vendor\minicolors\jquery.minicolors.css" />
+    <Content Include="Content\Vendor\minicolors\jquery.minicolors.png" />
+    <Content Include="Content\Vendor\morris.css" />
+    <Content Include="Content\Vendor\owl.carousel.css" />
+    <Content Include="Content\Vendor\owl.theme.default.min.css" />
+    <Content Include="Content\Vendor\pace.css" />
+    <Content Include="Content\Vendor\select2\select2-spinner.gif" />
+    <Content Include="Content\Vendor\select2\select2.css" />
+    <Content Include="Content\Vendor\select2\select2.png" />
+    <Content Include="Content\Vendor\select2\select2x2.png" />
+    <Content Include="Content\Vendor\bootstrap.css" />
+    <Content Include="Content\Vendor\simplify.css" />
+    <Content Include="Global.asax" />
+    <Content Include="Jt76Base\app.js" />
+    <Content Include="Jt76Base\Common\bootstrap.dialog.js" />
+    <Content Include="Jt76Base\Common\common.js" />
+    <Content Include="Jt76Base\config.exceptionHandler.js" />
+    <Content Include="Jt76Base\config.js" />
+    <Content Include="Jt76Base\Common\logger.js" />
+    <Content Include="Jt76Base\config.route.js" />
+    <Content Include="Jt76Base\Layout\footer.html" />
+    <Content Include="Jt76Base\Layout\main-container.html" />
+    <Content Include="Jt76Base\Layout\main-container.js" />
+    <Content Include="Jt76Base\Layout\sidebar-menu.js" />
+    <Content Include="Jt76Base\Layout\shell.html" />
+    <Content Include="Jt76Base\Layout\sidebar-menu.html" />
+    <Content Include="Jt76Base\Layout\top-nav.html" />
+    <Content Include="Jt76Base\Layout\top-nav.js" />
+    <Content Include="Jt76Base\Modules\About\about.html" />
+    <Content Include="Jt76Base\Modules\About\projectPage.js" />
+    <Content Include="Jt76Base\Modules\Admin\admin.js" />
+    <Content Include="Jt76Base\Modules\Admin\dashboard.js" />
+    <Content Include="Jt76Base\Modules\Admin\errorDetails.html" />
+    <Content Include="Jt76Base\Modules\Admin\errorDetails.js" />
+    <Content Include="Jt76Base\Modules\Admin\logMessages.js" />
+    <Content Include="Jt76Base\Modules\Admin\errors.js" />
+    <Content Include="Jt76Base\Modules\Admin\admin.html" />
+    <Content Include="Jt76Base\Modules\Admin\dashboard.html" />
+    <Content Include="Jt76Base\Modules\Admin\userAdmin.html" />
+    <Content Include="Jt76Base\Modules\Admin\logMessages.html" />
+    <Content Include="Jt76Base\Modules\Admin\errors.html" />
+    <Content Include="Jt76Base\Modules\Admin\userAdmin.js" />
+    <Content Include="Jt76Base\Modules\Contact\contact.html" />
+    <Content Include="Jt76Base\Modules\Contact\contact.js" />
+    <Content Include="Jt76Base\Modules\Dashboard\dashboard.html" />
+    <Content Include="Jt76Base\Modules\Dashboard\dashboard.js" />
+    <Content Include="Jt76Base\Modules\Project\projectPage.html" />
+    <Content Include="Jt76Base\Modules\Project\projectPage.js" />
+    <Content Include="Jt76Base\Repositories\repositories.js" />
+    <Content Include="Jt76Base\Repositories\repository.abstract.js" />
+    <Content Include="Jt76Base\Repositories\repository.errors.js" />
+    <Content Include="Jt76Base\Repositories\repository.logMessages.js" />
+    <Content Include="Jt76Base\Repositories\repository.lookups.js" />
+    <Content Include="Jt76Base\Services\dataContext.js" />
+    <Content Include="Jt76Base\Services\directives.js" />
+    <Content Include="Jt76Base\Services\entityManagerFactory.js" />
+    <Content Include="Jt76Base\Services\model.js" />
+    <Content Include="Jt76Base\Services\routeMediator.js" />
+    <Content Include="Scripts\NugetVendor\angular-animate.js" />
+    <Content Include="Scripts\NugetVendor\angular-aria.js" />
+    <Content Include="Scripts\NugetVendor\angular-cookies.js" />
+    <Content Include="Scripts\NugetVendor\angular-csp.css" />
+    <Content Include="Scripts\NugetVendor\angular-loader.js" />
+    <Content Include="Scripts\NugetVendor\angular-messages.js" />
+    <Content Include="Scripts\NugetVendor\angular-mocks.js" />
+    <Content Include="Scripts\NugetVendor\angular-resource.js" />
+    <Content Include="Scripts\NugetVendor\angular-route.js" />
+    <Content Include="Scripts\NugetVendor\angular-sanitize.js" />
+    <Content Include="Scripts\NugetVendor\angular-scenario.js" />
+    <Content Include="Scripts\NugetVendor\angular-touch.js" />
+    <Content Include="Scripts\NugetVendor\angular.js" />
+    <Content Include="Scripts\NugetVendor\moment.js" />
+    <Content Include="Scripts\NugetVendor\toastr.js" />
+    <Content Include="Scripts\Vendor\angular-loading-bar.js" />
+    <Content Include="Scripts\Vendor\bootstrap-datetimepicker.js" />
+    <Content Include="Scripts\Vendor\bootstrap-slider.js" />
+    <Content Include="Scripts\Vendor\bootstrap.js" />
+    <Content Include="Scripts\Vendor\breeze.angular.js" />
+    <Content Include="Scripts\Vendor\breeze.debug.js" />
+    <Content Include="Scripts\Vendor\breeze.directives.js" />
+    <None Include="Scripts\Vendor\breeze.intellisense.js" />
+    <Content Include="Scripts\Vendor\breeze.min.js" />
+    <Content Include="Scripts\Vendor\breeze.saveErrorExtensions.js" />
+    <Content Include="Scripts\Vendor\dataTables.bootstrap.js" />
+    <Content Include="Scripts\Vendor\datepicker.js" />
+    <Content Include="Scripts\Vendor\dropzone.js" />
+    <Content Include="Scripts\Vendor\fullcalendar.js" />
+    <Content Include="Scripts\Vendor\jquery-1.11.1.js" />
+    <Content Include="Scripts\Vendor\jquery.colorbox.js" />
+    <Content Include="Scripts\Vendor\jquery.easypiechart.js" />
+    <Content Include="Scripts\Vendor\jquery.flot.min.js" />
+    <Content Include="Scripts\Vendor\jquery.flot.stack.js" />
+    <Content Include="Scripts\Vendor\jquery.gritter.js" />
+    <Content Include="Scripts\Vendor\jquery.localScroll.js" />
+    <Content Include="Scripts\Vendor\jquery.nestable.js" />
+    <Content Include="Scripts\Vendor\jquery.noty.packaged.js" />
+    <Content Include="Scripts\Vendor\jquery.popupoverlay.js" />
+    <Content Include="Scripts\Vendor\jquery.scrollTo.js" />
+    <Content Include="Scripts\Vendor\jquery.sortable.js" />
+    <Content Include="Scripts\Vendor\jquery.steps.js" />
+    <Content Include="Scripts\Vendor\jquery.tagsinput.js" />
+    <Content Include="Scripts\Vendor\masonry.pkgd.js" />
+    <Content Include="Scripts\Vendor\modernizr.js" />
+    <Content Include="Scripts\Vendor\morris.js" />
+    <Content Include="Scripts\Vendor\owl.carousel.js" />
+    <Content Include="Scripts\Vendor\parsley.js" />
+    <Content Include="Scripts\Vendor\rapheal.js" />
+    <Content Include="Scripts\Vendor\select2.js" />
+    <Content Include="Scripts\Vendor\skycons.js" />
+    <Content Include="Scripts\Vendor\sparkline.js" />
+    <Content Include="Scripts\Vendor\ui-bootstrap-tpls-0.10.0.js" />
+    <Content Include="Scripts\Vendor\waypoints.js" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Scripts\_references.js" />
+    <Content Include="Views\Web.config" />
+    <Content Include="Views\_ViewStart.cshtml" />
+    <Content Include="Views\Shared\Error.cshtml" />
+    <Content Include="Views\Shared\_Layout.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\JT76.Common\Jt76Base.Common.csproj">
+      <Project>{ff020b2c-42eb-45cc-a7d1-4c5d768bb5ba}</Project>
+      <Name>Jt76Base.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\JT76.Data\Jt76Base.Data.csproj">
+      <Project>{88c6a16a-1b40-4629-939b-6d2a2f80f499}</Project>
+      <Name>Jt76Base.Data</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="packages.config" />
+    <Content Include="Content\Fonts\fontawesome-webfont.eot" />
+    <Content Include="Content\Fonts\fontawesome-webfont.ttf" />
+    <Content Include="Content\Fonts\fontawesome-webfont.woff" />
+    <Content Include="Content\Fonts\FontAwesome.otf" />
+    <Content Include="Content\Fonts\ionicons.eot" />
+    <Content Include="Content\Fonts\ionicons.ttf" />
+    <Content Include="Content\Fonts\ionicons.woff" />
+    <Content Include="Content\Images\Sorting icons.psd" />
+    <Content Include="Content\site.less" />
+    <Content Include="Content\site.css.map">
+      <DependentUpon>site.css</DependentUpon>
+    </Content>
+    <Content Include="Content\toastr.less" />
+    <Content Include="Content\toastr.css.map">
+      <DependentUpon>toastr.css</DependentUpon>
+    </Content>
+    <None Include="Project_Readme.html" />
+    <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Scripts\NugetVendor\errors.json" />
+    <Content Include="Scripts\NugetVendor\version.json" />
+    <Content Include="Views\Home\LockScreen.cshtml" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <Target Name="MvcBuildViews" AfterTargets="AfterBuild" Condition="'$(MvcBuildViews)'=='true'">
+    <AspNetCompiler VirtualPath="temp" PhysicalPath="$(WebProjectOutputDir)" />
+  </Target>
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>53079</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:52254/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Import Project="$(SolutionDir)\.nuget\NuGet.targets" Condition="Exists('$(SolutionDir)\.nuget\NuGet.targets')" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Enable NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('$(SolutionDir)\.nuget\NuGet.targets')" Text="$([System.String]::Format('$(ErrorText)', '$(SolutionDir)\.nuget\NuGet.targets'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target> -->
+</Project>

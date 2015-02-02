@@ -1,0 +1,34 @@
+﻿<div class="main-container" data-ng-controller="mainContainer as vm">
+    <div id="main-container" class="padding-md">
+
+        <div class="row">
+            <div class="row jt76-padding-sides-md">
+                <div class="col-xs-9 col-sm-10 col-lg-10">
+                    <div class="page-title">
+                        {{strTitle}}
+                    </div>
+                    <div class="page-sub-header" data-ng-bind-html="htmlTitleMessage"></div>
+                </div>
+                <div class="text-right p-top-sm pull-right col-xs-3 col-sm-2 col-lg-2">
+                    <a href="#/" class="btn btn-default"><i class="fa fa-home"></i></a>
+                </div>
+            </div>
+
+            <hr class="jt76-hr-md" />
+
+            <div class="row jt76-content-placeholder jt76-padding-sides-xlg" data-ng-show="bInitialLoad">
+                <div class="page-title">
+                    Loading...
+                </div>
+            </div>
+
+            <div data-ng-view class="row shuffle-animation" data-ng-show="!bInitialLoad"></div>
+
+            <!--<div data-ng-include="'/Jt76Base/Modules/Dashboard/dashboard.html'"></div>-->
+            <!--<div data-ng-include="'/Jt76Base/Modules/Project/projectPage.html'"></div>-->
+            <!--<div data-ng-include="'/Jt76Base/Modules/Contact/contact.html'"></div>-->
+            <!--<div data-ng-include="'/Jt76Base/Modules/Admin/admin.html'"></div>-->
+
+        </div>
+    </div>
+</div>
