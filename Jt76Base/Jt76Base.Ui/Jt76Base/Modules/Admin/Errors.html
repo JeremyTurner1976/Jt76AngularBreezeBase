@@ -67,26 +67,22 @@
                     <th>Message</th>
                     <th>Source and Level</th>
                     <th>Additional Information</th>
-                    <!--<th>StackTrace</th>-->
                 </tr>
             </thead>
             <tbody>
                 <tr data-ng-repeat="item in vm.filteredErrors">
                     <td>
-                        <div>{{item.dtShortLocalCreated}}</div>
+                        <div class="jt76-multiline">{{item.dtShortLocalCreated}}</div>
                     </td>
                     <td>
-                        <div><a class="jt76-title-link" data-ng-click="vm.gotoError(item)">{{item.strMessage}}</a></div>
+                        <div class="jt76-multiline"><a class="jt76-title-link" data-ng-click="vm.gotoError(item)">{{item.strMessage}}</a></div>
                     </td>
                     <td>
-                        <div>{{item.strSource}} {{item.strErrorLevel}}</div>
+                        <div class="jt76-multiline">{{item.strSource}} {{item.strErrorLevel}}</div>
                     </td>
                     <td>
-                        <div>{{item.strAdditionalInformation}}</div>
+                        <div class="jt76-multiline">{{item.strAdditionalInformation}}</div>
                     </td>
-                    <!--<td>
-                        <div>{{item.strStackTrace}}</div>
-                    </td>-->
                 </tr>
             </tbody>
         </table>

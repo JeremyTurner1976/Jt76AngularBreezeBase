@@ -46,10 +46,11 @@
                         </div>
                         <div class="form-group">
                             <label aria-for="strErrorLevel">Level</label>
-                            <select name="strErrorLevel" class="form-control" 
+                            <select name="strErrorLevel" class="form-control"
                                     required data-ng-model="vm.error.strErrorLevel">
                                 <option data-ng-repeat="lookupItem in vm.lookupErrorLevels">{{lookupItem.strErrorLevel}}</option>
                             </select>
+                            <span class="jt76-error" data-ng-show="Form.strErrorLevel.$error.required">Required</span>
                         </div>
                         <div class="form-group">
                             <label aria-for="strSource">Source</label>
