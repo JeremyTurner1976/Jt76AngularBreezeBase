@@ -153,7 +153,7 @@
                     vm.strOrderBy = key;
             });
 
-            if (vm.strOrderBy.substr(0,2).indexOf("dt") === 0)
+            if (vm.strOrderBy.substr(0, 2).indexOf("dt") === 0)
                 vm.strOrderBy += " desc";
             else if (vm.strOrderBy.length > 0)
                 vm.strOrderBy += " asc";

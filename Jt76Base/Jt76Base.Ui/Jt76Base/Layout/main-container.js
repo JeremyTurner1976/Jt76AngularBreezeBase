@@ -17,9 +17,6 @@
         var vm = this;
    
         function activate() {
-            common.activateController([], strControllerId).then(function (data) {
-                logSuccess("Jt76 has loaded. Retrieving app data.");
-            });
         }
 
         activate();

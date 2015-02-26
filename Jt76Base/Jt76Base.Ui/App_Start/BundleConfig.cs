@@ -32,6 +32,7 @@ namespace Jt76Base.Ui
             bundles.Add(new ScriptBundle("~/bundles/wrapBootstrap").Include(
                 "~/Scripts/Vendor/jquery-1.11.1.js",
                 "~/Scripts/Vendor/bootstrap.js",
+                //"~/Scripts/Vendor/jquery.slimscroll.js",
                 "~/Scripts/Vendor/skycons.js",
                 "~/Scripts/Vendor/modernizr.js",
 

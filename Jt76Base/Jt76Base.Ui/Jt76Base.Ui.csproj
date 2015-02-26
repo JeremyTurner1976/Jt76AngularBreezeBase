@@ -274,6 +274,7 @@
     <Content Include="Jt76Base\Layout\footer.html" />
     <Content Include="Jt76Base\Layout\main-container.html" />
     <Content Include="Jt76Base\Layout\main-container.js" />
+    <Content Include="Jt76Base\Layout\shell.js" />
     <Content Include="Jt76Base\Layout\sidebar-menu.js" />
     <Content Include="Jt76Base\Layout\shell.html" />
     <Content Include="Jt76Base\Layout\sidebar-menu.html" />
@@ -349,6 +350,7 @@
     <Content Include="Scripts\Vendor\jquery.noty.packaged.js" />
     <Content Include="Scripts\Vendor\jquery.popupoverlay.js" />
     <Content Include="Scripts\Vendor\jquery.scrollTo.js" />
+    <Content Include="Scripts\Vendor\jquery.slimscroll.js" />
     <Content Include="Scripts\Vendor\jquery.sortable.js" />
     <Content Include="Scripts\Vendor\jquery.steps.js" />
     <Content Include="Scripts\Vendor\jquery.tagsinput.js" />
