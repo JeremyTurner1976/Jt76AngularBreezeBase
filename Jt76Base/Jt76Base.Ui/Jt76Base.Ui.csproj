@@ -197,6 +197,7 @@
     <Content Include="Content\Images\forward_disabled.png" />
     <Content Include="Content\Images\forward_enabled.png" />
     <Content Include="Content\Images\forward_enabled_hover.png" />
+    <Content Include="Content\Images\Jt76Base\background.png" />
     <Content Include="Content\Images\Jt76Base\developer.jpg">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>

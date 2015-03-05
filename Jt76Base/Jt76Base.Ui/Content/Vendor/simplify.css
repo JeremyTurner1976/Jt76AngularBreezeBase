@@ -954,8 +954,9 @@ a.list-group-item.active:focus {
   position: fixed;
   background-color: #131e25;
   color: #8dacc4;
-  left: 0;
-  width: 240px;
+  /*left: 0;*/
+  margin-left: 2px;
+  width: 238px;
   bottom: 0;
   padding: 5px 10px;
   transition: left 0.5s ease;
