@@ -15,6 +15,15 @@
         progress(50, $('#progressBar'));
 
         var vm = this;
+        vm.strContentHeight = getInnerHeightStyle();
+
+        function getInnerHeightStyle(){
+            var nFooterHeight = 32;
+            var nHeaderHeight = 52;
+            var nOverallPadding = 15;
+            var nDesiredHeight = (window.innerHeight - (nFooterHeight + nHeaderHeight + nOverallPadding));
+            return nDesiredHeight + "px";
+        }
    
         function activate() {
         }
