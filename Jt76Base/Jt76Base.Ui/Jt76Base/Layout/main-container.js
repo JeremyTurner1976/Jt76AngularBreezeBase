@@ -22,6 +22,11 @@
             var nHeaderHeight = 52;
             var nOverallPadding = 15;
             var nDesiredHeight = (window.innerHeight - (nFooterHeight + nHeaderHeight + nOverallPadding));
+
+            //min-height of the application
+            if (nDesiredHeight < 450)
+                nDesiredHeight = 450;
+
             return nDesiredHeight + "px";
         }
    
