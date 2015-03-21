@@ -25,7 +25,7 @@ namespace Jt76Base.Data.Factories
             var error = new Error
             {
                 StrMessage = e.Message + ((e.InnerException == null) ? "" : "     |Inner Exception| " + e.InnerException.Message),
-                StrSource = e.Source + "|Module| " + (e.TargetSite != null ? e.TargetSite.Module.Name : "Aggregate Exception") + "     |Class| " + ((e.TargetSite != null && e.TargetSite.ReflectedType != null) ? e.TargetSite.ReflectedType.Name : "No Reflected Name Found"),
+                StrSource = e.Source + Environment.NewLine + "|Module| " + (e.TargetSite != null ? e.TargetSite.Module.Name : "Aggregate Exception") + Environment.NewLine + "|Class| " + ((e.TargetSite != null && e.TargetSite.ReflectedType != null) ? e.TargetSite.ReflectedType.Name : "No Reflected Name Found"),
                 StrErrorLevel = Enum.GetName(typeof(ErrorLevels), errorLevel),
                 StrAdditionalInformation = strAdditionalInformation,
                 StrStackTrace = e.StackTrace + Environment.NewLine + (e.InnerException == null ? "             |No inner exception| " : "             |Inner Exception| " + GetErrorAsString(e.InnerException)),
@@ -122,7 +122,7 @@ namespace Jt76Base.Data.Factories
             Debug.WriteLine("ErrorFactory.GetAllFiles()");
 
             // Should throw an UnauthorizedAccessException exception. 
-            return System.IO.Directory.GetFiles(str, "*.txt", SearchOption.AllDirectories);
+            return Directory.GetFiles(str, "*.txt", SearchOption.AllDirectories);
         }
 
         public static bool GetThrownException()
