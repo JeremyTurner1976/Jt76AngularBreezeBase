@@ -36,7 +36,7 @@
                 <div class="smart-widget-body">
                     <form name="Form" novalidate>
                         <div class="form-group">
-                            <label aria-for="strMessage">Message</label>
+                            <label>Message</label>
                             <input name="strMessage" type="text" class="form-control"
                                    placeholder="Enter Message" data-ng-model="vm.error.strMessage"
                                    required data-ng-minlength="10" data-ng-maxlength="150" data-ng-model-options="{allowInvalid: true}" />
@@ -45,7 +45,7 @@
                             <span class="jt76-error" data-ng-show="Form.strMessage.$error.maxlength">Maximum 255 Characters</span>
                         </div>
                         <div class="form-group">
-                            <label aria-for="strErrorLevel">Level</label>
+                            <label>Level</label>
                             <select name="strErrorLevel" class="form-control"
                                     required data-ng-model="vm.error.strErrorLevel">
                                 <option data-ng-repeat="lookupItem in vm.lookupErrorLevels">{{lookupItem.strErrorLevel}}</option>
@@ -53,7 +53,7 @@
                             <span class="jt76-error" data-ng-show="Form.strErrorLevel.$error.required">Required</span>
                         </div>
                         <div class="form-group">
-                            <label aria-for="strSource">Source</label>
+                            <label>Source</label>
                             <input name="strSource" type="text" class="form-control"
                                    placeholder="Enter Source" data-ng-model="vm.error.strSource"
                                    required data-ng-minlength="5" data-ng-maxlength="255" data-ng-model-options="{allowInvalid: true}" />
@@ -62,7 +62,7 @@
                             <span class="jt76-error" data-ng-show="Form.strSource.$error.maxlength">Maximum 255 Characters</span>
                         </div>
                         <div class="form-group">
-                            <label aria-for="strAdditionalInformation">Additional Information</label>
+                            <label>Additional Information</label>
                             <input name="strAdditionalInformation" type="text" class="form-control"
                                    placeholder="Enter Additional Information" data-ng-model="vm.error.strAdditionalInformation"
                                    required data-ng-minlength="5" data-ng-maxlength="255" data-ng-model-options="{allowInvalid: true}" />
@@ -71,7 +71,7 @@
                             <span class="jt76-error" data-ng-show="Form.strAdditionalInformation.$error.maxlength">Maximum 255 Characters</span>
                         </div>
                         <div class="form-group">
-                            <label aria-for="strStackTrace">Stack Trace</label>
+                            <label>Stack Trace</label>
                             <textarea rows="6" name="strStackTrace" class="form-control"
                                       placeholder="Enter Stack Trace" data-ng-model="vm.error.strStackTrace"
                                       required data-ng-minlength="5" data-ng-maxlength="4000" data-ng-model-options="{allowInvalid: true}"></textarea>
